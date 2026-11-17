@@ -70,6 +70,16 @@ Still open:
   network connections and concurrency. This is the first thing to prove,
   because everything else assumes it.
 
+Notes for the protocol:
+
+- **Asking is separate from changing.** Anything that changes a Wave is a signed
+  operation. A request that only asks can never alter the record.
+- **Use HTTP QUERY for asking.** Wherever the protocol uses HTTP, a request
+  that reads and needs a structured body (a range of history, a search, an
+  authorised semantic query) uses the QUERY method, RFC 10008: safe,
+  idempotent, cacheable and repeatable, and it keeps the query out of the
+  address. Support in libraries, proxies and gateways is to be tested early.
+
 Deferred, not forgotten:
 
 - **The full Side Door.** The paper describes a second entrance for those who
