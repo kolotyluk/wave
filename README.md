@@ -54,6 +54,8 @@ doors, the robots and the code in the browser.
 | Where authority sits | The server is the authority on *admission*, not on *order* | With CRDTs no one decides the order. The server checks each operation's signature and permission before relaying or storing it, and keeps the append-only record. |
 | Server | Runs as WebAssembly, hosted by a WebAssembly runtime inside a container | The same sandboxed, portable artifact runs wherever Wave runs, and what is running can be identified exactly. |
 | Front Door | Its own component, `wave-door`, pluggable, with a very decent default | The door stands between the person and Wave, so that nobody has to learn Wave to use it. Others can supply a different door without touching the record. |
+| Side Door | Built early, in a minimal form, as the way to inspect the record | It shows structure, permissions, agents and history directly, which is what manual and sanity testing need. It starts as a test instrument and grows into the Side Door the paper describes. A second door from the start also keeps the door interface honest. |
+| Door interface | Independent of how the person communicates | The first door is a browser door. Voice, telephone and text-message doors come later, so the interface carries what the person means and what Wave answers, and never assumes a screen. |
 | Robots | Join through the same interface as people | If there is no other route in, "no back door" is a property of the architecture, not a promise. |
 | Robot isolation | WebAssembly sandbox, with only the capabilities the Wave grants | A robot can do what it was permitted to do and nothing else. |
 | Browser application | Rust compiled to WebAssembly | One language end to end, and the core library runs unchanged in the browser. |
@@ -67,9 +69,15 @@ Still open:
 - **How the server's WebAssembly is hosted.** Which runtime, and how it handles
   network connections and concurrency. This is the first thing to prove,
   because everything else assumes it.
-- **Where the Side Door lives.** The native view of structure and history may
-  be a second door behind the same interface as the Front Door, or part of
-  the browser application.
+
+Deferred, not forgotten:
+
+- **The full Side Door.** The paper describes a second entrance for those who
+  need direct control. The skeleton builds only the minimal form, for
+  inspection and testing. Editing through it, and making it fit for the
+  public, come later.
+- **Voice, telephone and text-message doors.** Later, but accounted for in the
+  door interface from the start.
 
 ## Planned layout
 
@@ -79,18 +87,20 @@ A Cargo workspace. Names are provisional.
 | --- | --- |
 | `wave-core` | The shared object: document, operations, history, replay, permissions. No input or output. Compiles natively and to WebAssembly. |
 | `wave-server` | Admits, stores and relays operations. Keeps the append-only record. Compiles to WebAssembly. |
-| `wave-door` | The Front Door. It buffers the person from Wave: plain language in, visible structure out. Defines the interface a door must meet, and ships the default door. |
+| `wave-door` | The Front Door. It buffers the person from Wave: plain language in, visible structure out. Defines the interface a door must meet, in terms that do not depend on a screen, and ships the default door. |
+| `wave-side` | The minimal Side Door: a direct view of a Wave's structure, permissions, participants and history. Read-only at first. |
 | `wave-robot` | The participant interface for robots, and the sandbox that hosts them. Separate from the door: a robot is a participant in a Wave, a door is how a person reaches one. |
-| `wave-app` | The browser application that hosts a door. |
+| `wave-app` | The browser application. It holds no door logic of its own: it hosts the doors and connects them to the server. A toggle in the interface switches between **door mode** (the Front Door) and **raw mode** (the Side Door) over the same Wave. |
 
 ## Order of work
 
 1. A proof that `wave-server` can run as WebAssembly in a container and accept a connection.
 2. `wave-core` and playback of a document's history.
-3. A scripted robot, to prove the participant interface before any model is involved.
-4. `wave-door`: the door interface and the default Front Door.
-5. A model behind a robot.
-6. Two servers exchanging one Wave, to test federation.
+3. The minimal Side Door, so the record can be inspected by eye from here on.
+4. A scripted robot, to prove the participant interface before any model is involved.
+5. `wave-door`: the door interface and the default Front Door.
+6. A model behind a robot.
+7. Two servers exchanging one Wave, to test federation.
 
 ## Test environment
 
