@@ -90,7 +90,7 @@ A Cargo workspace. Names are provisional.
 | `wave-door` | The Front Door. It buffers the person from Wave: plain language in, visible structure out. Defines the interface a door must meet, in terms that do not depend on a screen, and ships the default door. |
 | `wave-side` | The minimal Side Door: a direct view of a Wave's structure, permissions, participants and history. Read-only at first. |
 | `wave-robot` | The participant interface for robots, and the sandbox that hosts them. Separate from the door: a robot is a participant in a Wave, a door is how a person reaches one. |
-| `wave-app` | The browser application. It holds no door logic of its own: it hosts the doors and connects them to the server. A toggle in the interface switches between **door mode** (the Front Door) and **raw mode** (the Side Door) over the same Wave. |
+| `wave-app` | The browser application. It holds no door logic of its own: it hosts the doors and connects them to the server. A toggle in the interface switches between **door mode** (the Front Door) and **raw mode** (the Side Door) over the same Wave. A split screen shows both side by side, so that what is asked through the Front Door can be watched taking effect in the record. |
 
 ## Order of work
 
