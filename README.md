@@ -134,18 +134,41 @@ modules: one for the server, one for the browser, and one for each robot.
 6. A model behind a robot.
 7. Two servers exchanging one Wave, to test federation.
 
-## Test environment
+## Testing stages
 
-A TrueNAS server running containers and virtual machines. One server runs in a
-container; a second runs in a virtual machine so that federation is tested
-between two independent machines.
+The same container image moves through every stage unchanged. What is tested
+is what ships.
+
+| Stage | Where | What it proves |
+| --- | --- | --- |
+| Alpha | Docker, on a developer's machine | It builds, starts and behaves, quickly and repeatably. Every change gets here. |
+| Beta | A TrueNAS server running containers and virtual machines | It survives a real network, real storage and restarts. One server runs in a container and a second in a virtual machine, so federation is tested between two independent machines. |
+| Production | A commercial cloud, chosen later | It runs where the public can reach it. Not part of the skeleton. |
+
+Before any of these, the unit tests and the test vectors run natively on
+every build.
+
+To keep the choice of cloud open, Wave depends on nothing a single provider
+owns: a container, a network and storage are all it asks for.
+
+Candidate platforms, none yet evaluated:
+
+- **Canadian-owned:** ThinkOn, Micrologic, TELUS, Bell.
+- **Other, outside the United States:** OVHcloud and Scaleway (France),
+  Hetzner, IONOS and STACKIT (Germany), Exoscale and Infomaniak
+  (Switzerland), UpCloud (Finland).
+- **United States:** AWS, Azure, Google Cloud, Oracle.
+
+Where a provider is owned decides whose law can reach the data, wherever the
+machines sit. For public infrastructure that is a question of policy, not
+only of engineering, and it belongs to whoever deploys Wave.
 
 ## Who does what
 
 - **Eric Kolotyluk** decides and verifies.
 - **Claude** designs, writes, tests and reviews code. It works in this
   repository's folder and has no access to the servers.
-- **Oz**, in Warp, builds and deploys to the test environment.
+- **Oz**, in Warp, builds and deploys to the alpha and beta stages.
 
 Two tools with different permissions and a person between them: a small
 working example of the separation of functions the paper argues for.
