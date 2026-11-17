@@ -81,11 +81,15 @@ Deferred, not forgotten:
 
 ## Planned layout
 
-A Cargo workspace. Names are provisional.
+A Cargo workspace, built from source in one build. Names are provisional.
+
+Rust has no stable binary interface, so nothing here is shipped as a prebuilt
+library. The crates are divisions of the source. What ships are WebAssembly
+modules: one for the server, one for the browser, and one for each robot.
 
 | Crate | Role |
 | --- | --- |
-| `wave-core` | The shared object: document, operations, history, replay, permissions. No input or output. Compiles natively and to WebAssembly. |
+| `wave-core` | The shared object: document, operations, history, replay, permissions. No input or output. It has no artifact of its own: it is source, compiled into every component that uses it, so the server and the browser run the same code. |
 | `wave-server` | Admits, stores and relays operations. Keeps the append-only record. Compiles to WebAssembly. |
 | `wave-door` | The Front Door. It buffers the person from Wave: plain language in, visible structure out. Defines the interface a door must meet, in terms that do not depend on a screen, and ships the default door. |
 | `wave-side` | The minimal Side Door: a direct view of a Wave's structure, permissions, participants and history. Read-only at first. |
