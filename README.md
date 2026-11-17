@@ -72,6 +72,22 @@ Still open:
 
 Notes for the protocol:
 
+- **Rust source is the working definition, for now.** The protocol lives in
+  `wave-protocol` and nowhere else. Wave must be implementable in any
+  language, so a written specification follows when a second implementation
+  is attempted.
+- **Encoding is exact.** Every operation is signed, and a signature is over
+  exact bytes, so two implementations must produce the same bytes for the
+  same operation. The encoding is specified deliberately and never left to a
+  library's defaults.
+- **Test vectors are the neutral truth.** The `vectors/` directory holds
+  example messages with their expected bytes and results. They are not Rust.
+  Any implementation must pass them, which makes them the start of the
+  conformance suite.
+- **The robot and door boundary gets an interface definition.** Robots and
+  doors are WebAssembly components that others may write in other languages,
+  so that boundary is to be described in WebAssembly's own interface
+  language. The tooling is to be verified before anything depends on it.
 - **Asking is separate from changing.** Anything that changes a Wave is a signed
   operation. A request that only asks can never alter the record.
 - **Use HTTP QUERY for asking.** Wherever the protocol uses HTTP, a request
@@ -91,7 +107,8 @@ Deferred, not forgotten:
 
 ## Planned layout
 
-A Cargo workspace, built from source in one build. Names are provisional.
+A Cargo workspace, built from source in one build. Crates live under
+`crates/`. Names are provisional. Only `wave-protocol` exists so far.
 
 Rust has no stable binary interface, so nothing here is shipped as a prebuilt
 library. The crates are divisions of the source. What ships are WebAssembly
@@ -99,6 +116,7 @@ modules: one for the server, one for the browser, and one for each robot.
 
 | Crate | Role |
 | --- | --- |
+| `wave-protocol` | The protocol: the messages and operations that servers, doors and robots exchange, and the rules for encoding them. Nothing else. No dependencies. |
 | `wave-core` | The shared object: document, operations, history, replay, permissions. No input or output. It has no artifact of its own: it is source, compiled into every component that uses it, so the server and the browser run the same code. |
 | `wave-server` | Admits, stores and relays operations. Keeps the append-only record. Compiles to WebAssembly. |
 | `wave-door` | The Front Door. It buffers the person from Wave: plain language in, visible structure out. Defines the interface a door must meet, in terms that do not depend on a screen, and ships the default door. |

@@ -1,0 +1,12 @@
+[package]
+name = "wave-protocol"
+description = "The Wave protocol: the messages and operations that servers, doors and robots exchange."
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+repository.workspace = true
+
+[lints]
+workspace = true
+
+[dependencies]

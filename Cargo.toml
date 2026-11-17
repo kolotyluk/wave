@@ -1,0 +1,13 @@
+[workspace]
+resolver = "2"
+members = ["crates/wave-protocol"]
+
+[workspace.package]
+version = "0.0.0"
+edition = "2021"
+license = "Apache-2.0"
+repository = "https://github.com/kolotyluk/wave"
+
+[workspace.lints.rust]
+unsafe_code = "forbid"
+missing_docs = "warn"
