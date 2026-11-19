@@ -10,8 +10,14 @@ Kolotyluk. This repository is where a small part of it becomes running code.
 
 ## Status
 
-**Nothing is built yet.** As of 2026-11-16 this repository holds the plan and
-the decisions made so far. Code follows.
+**Nothing is built yet.** This repository holds the plan and the decisions
+made so far. Code follows.
+
+**This repository is the source of truth.** Where it and the discussion paper
+disagree, the repository governs. Until the repository is finalized,
+integration runs both ways: the paper informs the repository, and decisions
+made here are carried back into the paper. The two may be out of step in the
+meantime.
 
 ## What the skeleton must show
 
@@ -27,102 +33,22 @@ Two things, one on top of the other.
 The agent never hides the record it is working on. That is the point of the
 project.
 
-## Goals
+## Principles
 
-**Quality** and **trustworthiness**, in that order of dependence: the record
-can only be trusted if the code that keeps it is correct, and can be shown to
-be correct.
+- **If you don't have WebAssembly, you don't have Wave.**
+- **Invent only the model; standardize everything else.**
+- **No back door.** Robots and people enter by the same interface.
+- **No passwords, ever.**
+- **The record is evidence.** It can withstand scrutiny by a court of law,
+  and in some cases a stronger standard.
 
-In practice:
+## Documentation
 
-- Tests come before features. The core library is tested with randomised
-  concurrent edits that must always converge.
-- Every operation is signed by the participant who made it, human or robot.
-- Nothing reaches `main` without the checks passing.
-- What runs on a server corresponds to a specific commit.
-
-## Decisions so far
-
-One principle sits above the table: **if you don't have WebAssembly, you don't
-have Wave.** Every part of Wave that runs, runs as WebAssembly: the server, the
-doors, the robots and the code in the browser.
-
-| Question | Decision | Why |
-| --- | --- | --- |
-| Language | Rust throughout | Memory safety in the code that enforces permissions and keeps the record. |
-| How concurrent edits converge | Conflict-free replicated data types (CRDT) | Live character-level editing without writing operational transformation from scratch. |
-| Where authority sits | The server is the authority on *admission*, not on *order* | With CRDTs no one decides the order. The server checks each operation's signature and permission before relaying or storing it, and keeps the append-only record. |
-| Server | Runs as WebAssembly, hosted by a WebAssembly runtime inside a container | The same sandboxed, portable artifact runs wherever Wave runs, and what is running can be identified exactly. |
-| Front Door | Its own component, `wave-door`, pluggable, with a very decent default | The door stands between the person and Wave, so that nobody has to learn Wave to use it. Others can supply a different door without touching the record. |
-| Side Door | Built early, in a minimal form, as the way to inspect the record | It shows structure, permissions, agents and history directly, which is what manual and sanity testing need. It starts as a test instrument and grows into the Side Door the paper describes. A second door from the start also keeps the door interface honest. |
-| Door interface | Independent of how the person communicates | The first door is a browser door. Voice, telephone and text-message doors come later, so the interface carries what the person means and what Wave answers, and never assumes a screen. |
-| Robots | Join through the same interface as people | If there is no other route in, "no back door" is a property of the architecture, not a promise. |
-| Robot isolation | WebAssembly sandbox, with only the capabilities the Wave grants | A robot can do what it was permitted to do and nothing else. |
-| Browser application | Rust compiled to WebAssembly | One language end to end, and the core library runs unchanged in the browser. |
-| Apache Wave | Specification lineage and reference, not runtime | The model and protocol documents are the inheritance. The retired Java code is something to test against, not to run. |
-
-Still open:
-
-- **Which CRDT library.** The record needs complete, attributed history, which
-  favours a library that keeps every change. To be confirmed against the
-  current state of the Rust options before any code depends on one.
-- **How the server's WebAssembly is hosted.** Which runtime, and how it handles
-  network connections and concurrency. This is the first thing to prove,
-  because everything else assumes it.
-
-Notes for the protocol:
-
-- **Rust source is the working definition, for now.** The protocol lives in
-  `wave-protocol` and nowhere else. Wave must be implementable in any
-  language, so a written specification follows when a second implementation
-  is attempted.
-- **Encoding is exact.** Every operation is signed, and a signature is over
-  exact bytes, so two implementations must produce the same bytes for the
-  same operation. The encoding is specified deliberately and never left to a
-  library's defaults.
-- **Test vectors are the neutral truth.** The `vectors/` directory holds
-  example messages with their expected bytes and results. They are not Rust.
-  Any implementation must pass them, which makes them the start of the
-  conformance suite.
-- **The robot and door boundary gets an interface definition.** Robots and
-  doors are WebAssembly components that others may write in other languages,
-  so that boundary is to be described in WebAssembly's own interface
-  language. The tooling is to be verified before anything depends on it.
-- **Asking is separate from changing.** Anything that changes a Wave is a signed
-  operation. A request that only asks can never alter the record.
-- **Use HTTP QUERY for asking.** Wherever the protocol uses HTTP, a request
-  that reads and needs a structured body (a range of history, a search, an
-  authorised semantic query) uses the QUERY method, RFC 10008: safe,
-  idempotent, cacheable and repeatable, and it keeps the query out of the
-  address. Support in libraries, proxies and gateways is to be tested early.
-
-Deferred, not forgotten:
-
-- **The full Side Door.** The paper describes a second entrance for those who
-  need direct control. The skeleton builds only the minimal form, for
-  inspection and testing. Editing through it, and making it fit for the
-  public, come later.
-- **Voice, telephone and text-message doors.** Later, but accounted for in the
-  door interface from the start.
-
-## Planned layout
-
-A Cargo workspace, built from source in one build. Crates live under
-`crates/`. Names are provisional. Only `wave-protocol` exists so far.
-
-Rust has no stable binary interface, so nothing here is shipped as a prebuilt
-library. The crates are divisions of the source. What ships are WebAssembly
-modules: one for the server, one for the browser, and one for each robot.
-
-| Crate | Role |
-| --- | --- |
-| `wave-protocol` | The protocol: the messages and operations that servers, doors and robots exchange, and the rules for encoding them. Nothing else. No dependencies. |
-| `wave-core` | The shared object: document, operations, history, replay, permissions. No input or output. It has no artifact of its own: it is source, compiled into every component that uses it, so the server and the browser run the same code. |
-| `wave-server` | Admits, stores and relays operations. Keeps the append-only record. Compiles to WebAssembly. |
-| `wave-door` | The Front Door. It buffers the person from Wave: plain language in, visible structure out. Defines the interface a door must meet, in terms that do not depend on a screen, and ships the default door. |
-| `wave-side` | The minimal Side Door: a direct view of a Wave's structure, permissions, participants and history. Read-only at first. |
-| `wave-robot` | The participant interface for robots, and the sandbox that hosts them. Separate from the door: a robot is a participant in a Wave, a door is how a person reaches one. |
-| `wave-app` | The browser application. It holds no door logic of its own: it hosts the doors and connects them to the server. A toggle in the interface switches between **door mode** (the Front Door) and **raw mode** (the Side Door) over the same Wave. A split screen shows both side by side, so that what is asked through the Front Door can be watched taking effect in the record. |
+- [Architecture](docs/architecture.md): the system as it stands.
+- [Decision records](docs/decisions/README.md): why it is that way, and what is
+  still open for debate.
+- [Test vectors](vectors/README.md): the language-neutral statement of the
+  protocol.
 
 ## Order of work
 
@@ -133,35 +59,6 @@ modules: one for the server, one for the browser, and one for each robot.
 5. `wave-door`: the door interface and the default Front Door.
 6. A model behind a robot.
 7. Two servers exchanging one Wave, to test federation.
-
-## Testing stages
-
-The same container image moves through every stage unchanged. What is tested
-is what ships.
-
-| Stage | Where | What it proves |
-| --- | --- | --- |
-| Alpha | Docker, on a developer's machine | It builds, starts and behaves, quickly and repeatably. Every change gets here. |
-| Beta | A TrueNAS server running containers and virtual machines | It survives a real network, real storage and restarts. One server runs in a container and a second in a virtual machine, so federation is tested between two independent machines. |
-| Production | A commercial cloud, chosen later | It runs where the public can reach it. Not part of the skeleton. |
-
-Before any of these, the unit tests and the test vectors run natively on
-every build.
-
-To keep the choice of cloud open, Wave depends on nothing a single provider
-owns: a container, a network and storage are all it asks for.
-
-Candidate platforms, none yet evaluated:
-
-- **Canadian-owned:** ThinkOn, Micrologic, TELUS, Bell.
-- **Other, outside the United States:** OVHcloud and Scaleway (France),
-  Hetzner, IONOS and STACKIT (Germany), Exoscale and Infomaniak
-  (Switzerland), UpCloud (Finland).
-- **United States:** AWS, Azure, Google Cloud, Oracle.
-
-Where a provider is owned decides whose law can reach the data, wherever the
-machines sit. For public infrastructure that is a question of policy, not
-only of engineering, and it belongs to whoever deploys Wave.
 
 ## Who does what
 
