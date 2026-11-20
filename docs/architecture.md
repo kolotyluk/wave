@@ -51,6 +51,21 @@ the open-court principle, procedure as rules, independence of the court as
 admission authority, and records that outlive their cryptography.
 ([0031](decisions/0031-courtroom-horizon.md))
 
+### Lineage
+
+Wave borrows concepts from proven designs and leaves their machinery behind.
+
+- **Apache Wave** (Google Wave, 2009–2018): the shared object, operations as
+  the only way to change it, attributed and replayable history, robots as
+  participants, federation. Not its RPC, its JSON mapping or its use of XMPP.
+  ([0013](decisions/0013-apache-wave-lineage.md))
+- **X.500** (ITU-T X.500 series, with LDAP as its lightweight successor): the
+  administrative model of X.501, which declared visible, precisely scoped
+  regions of a tree with their own rules, became Wave's bounds; operational
+  bindings between directory servers inform federation and agreement. X.500
+  was too heavy to adopt whole; Wave takes its ideas, not its weight.
+  ([0036](decisions/0036-bounds.md))
+
 ## 2. Constraints
 
 - **If you don't have WebAssembly, you don't have Wave.** Every part that runs,
@@ -234,6 +249,16 @@ projection of the record; what it may not see is replaced by a salted
 commitment, so every view still verifies. The open court is the view granted
 to an anonymous credential. *Proposed.*
 ([0032](decisions/0032-verifiable-views.md))
+
+### Bounds and without prejudice
+
+A bound is a visible demarcation around wavelets or history, with declared
+rules, after X.500's administrative areas. Without prejudice is one kind:
+everyone inside sees everything, nothing flows out, and robots agree for their
+principals. Capabilities are recorded as decisions; features built from them
+are in [features](features.md). *Proposed.*
+([0036](decisions/0036-bounds.md), [0037](decisions/0037-without-prejudice.md),
+[0038](decisions/0038-agreement.md))
 
 ### Identity
 

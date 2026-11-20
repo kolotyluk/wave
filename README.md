@@ -98,6 +98,7 @@ housing problem, helped in plain language, with a complete record they keep.
 - [Architecture](docs/architecture.md): the system as it stands.
 - [Decision records](docs/decisions/README.md): why it is that way, and what is
   still open for debate.
+- [Features](docs/features.md): configurations of capabilities.
 - [Messaging](docs/messaging.md): how Wave is explained, at three levels.
 - [Paper sync](docs/paper-sync.md): what the discussion paper still needs
   from this repository.

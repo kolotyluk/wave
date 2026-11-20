@@ -22,6 +22,10 @@ Remove an item once the paper carries it.
   journey. Canada Wave keeps the record of it." Plus the four-part test for
   when a journey suits a Wave. For the abstract and section 2. See also
   [messaging](messaging.md).
+- **Bounds, without prejudice and agreement**
+  ([0036](decisions/0036-bounds.md), [0037](decisions/0037-without-prejudice.md),
+  [0038](decisions/0038-agreement.md)): new since v0.4. The X.500 lineage of
+  bounds belongs beside Appendix B's directory layer.
 - **Courtroom horizon.** The repository records the long-term goal of
   conducting a court proceeding as a Wave
   ([0031](decisions/0031-courtroom-horizon.md)). Wording for the paper is

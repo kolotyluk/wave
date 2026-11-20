@@ -41,3 +41,6 @@ not to be built on. See [0001](0001-record-architecture-decisions.md).
 | [0033](0033-default-doors-and-tabbed-app.md) | Default doors, replaceable shells, and a tabbed app | Accepted |
 | [0034](0034-responsive-web-phone-first.md) | One responsive web app, phone-first for the Front Door | Proposed |
 | [0035](0035-front-door-agent-is-a-robot.md) | The Front Door agent is an ordinary robot | Proposed |
+| [0036](0036-bounds.md) | Bounds: visible demarcations with declared rules | Proposed |
+| [0037](0037-without-prejudice.md) | Without prejudice is a kind of bound | Proposed |
+| [0038](0038-agreement.md) | Agreement is a capability of participants | Proposed |
