@@ -1,6 +1,6 @@
 # 0024. The live stream starts on WebSocket, with WebTransport to be tested
 
-- Status: Proposed
+- Status: Superseded by [0041](0041-http3-ground-floor.md)
 - Date: 2026-11-19
 
 ## Context

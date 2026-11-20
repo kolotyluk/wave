@@ -98,6 +98,9 @@ housing problem, helped in plain language, with a complete record they keep.
 - [Architecture](docs/architecture.md): the system as it stands.
 - [Decision records](docs/decisions/README.md): why it is that way, and what is
   still open for debate.
+- [Environments](docs/environments.md): Ztuph Wave, the development and
+  demonstration instance.
+- [Robot governance](docs/robot-governance.md): how AI robots are governed.
 - [Features](docs/features.md): configurations of capabilities.
 - [Messaging](docs/messaging.md): how Wave is explained, at three levels.
 - [Paper sync](docs/paper-sync.md): what the discussion paper still needs

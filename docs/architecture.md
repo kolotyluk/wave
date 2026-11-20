@@ -218,8 +218,13 @@ body. It can never alter the record.
 - **HTTP API with CBOR bodies**, media type `application/wave+cbor`, with a
   JSON view by content negotiation. Drafts only, for debate.
   ([0016](decisions/0016-media-type.md), [0023](decisions/0023-http-api-cbor.md))
-- **Live stream** over WebSocket, with WebTransport to be tested. *Proposed.*
-  ([0024](decisions/0024-live-stream-transport.md))
+- **HTTP/3 and IPv6 are the ground floors.** The host handles the HTTP and IP
+  versions; Wave's code never sees them. HTTP/2 and IPv4 are basements, built
+  before any public user. *Proposed.*
+  ([0041](decisions/0041-http3-ground-floor.md),
+  [0042](decisions/0042-ipv6-first.md))
+- **Live stream** over WebTransport on HTTP/3, and WebSocket in the basement.
+  *Proposed.* ([0041](decisions/0041-http3-ground-floor.md))
 - **Robots and doors** as WebAssembly components, their boundary described in
   WIT. *Proposed.* ([0019](decisions/0019-component-interface.md))
 - **Federation** between servers. Not yet designed; see the open questions in
@@ -260,6 +265,16 @@ are in [features](features.md). *Proposed.*
 ([0036](decisions/0036-bounds.md), [0037](decisions/0037-without-prejudice.md),
 [0038](decisions/0038-agreement.md))
 
+### Robot governance
+
+Robots are governed in two layers: constraints the architecture enforces, and
+a published charter of conduct, whose hash travels with every operation the
+robot signs. A deployment may add rules and may mandate its doors, but a
+person can always see their own record. *Proposed.*
+([0039](decisions/0039-robot-governance.md),
+[0040](decisions/0040-deployments-may-mandate-doors.md),
+[robot governance](robot-governance.md))
+
 ### Identity
 
 No passwords. Passkeys for people. Assurance on a spectrum from anonymous to
@@ -275,6 +290,10 @@ One container image moves unchanged through alpha (Docker on a developer's
 machine), beta (TrueNAS, with one server in a container and another in a
 virtual machine for federation) and, later, production in a commercial cloud.
 ([0030](decisions/0030-one-image-through-stages.md))
+
+The development and demonstration instance is **Ztuph Wave**, under
+`ztuph.com`: hosts, DNS, certificates and firewall are in
+[environments](environments.md).
 
 Candidate platforms, none yet evaluated:
 
@@ -299,8 +318,9 @@ In the order they block work:
 4. **Which CRDT library.** ([0025](decisions/0025-crdt-library.md))
 5. **Admission under federation.**
    ([0005](decisions/0005-authority-on-admission.md))
-6. **The live-stream transport.**
-   ([0024](decisions/0024-live-stream-transport.md))
+6. **HTTP/3 and IPv6 in practice:** browsers, networks, and the runtime.
+   ([0041](decisions/0041-http3-ground-floor.md),
+   [0042](decisions/0042-ipv6-first.md))
 
 Items 2 to 4 precede the first test vector and the endpoints.
 

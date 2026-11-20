@@ -29,7 +29,7 @@ not to be built on. See [0001](0001-record-architecture-decisions.md).
 | [0021](0021-identity-assurance-spectrum.md) | Identity assurance is a spectrum | Accepted |
 | [0022](0022-evidentiary-record.md) | The record is evidentiary | Accepted |
 | [0023](0023-http-api-cbor.md) | The API is HTTP with CBOR bodies, not gRPC | Accepted |
-| [0024](0024-live-stream-transport.md) | The live stream starts on WebSocket, with WebTransport to be tested | Proposed |
+| [0024](0024-live-stream-transport.md) | The live stream starts on WebSocket, with WebTransport to be tested | Superseded by 0041 |
 | [0025](0025-crdt-library.md) | Which CRDT library | Proposed |
 | [0026](0026-server-webassembly-runtime.md) | Which WebAssembly runtime hosts the server | Proposed |
 | [0027](0027-reference-browser.md) | Firefox is the reference browser | Proposed |
@@ -44,3 +44,7 @@ not to be built on. See [0001](0001-record-architecture-decisions.md).
 | [0036](0036-bounds.md) | Bounds: visible demarcations with declared rules | Proposed |
 | [0037](0037-without-prejudice.md) | Without prejudice is a kind of bound | Proposed |
 | [0038](0038-agreement.md) | Agreement is a capability of participants | Proposed |
+| [0039](0039-robot-governance.md) | Robots are governed by enforced constraints and a published charter | Proposed |
+| [0040](0040-deployments-may-mandate-doors.md) | A deployment may mandate its doors | Proposed |
+| [0041](0041-http3-ground-floor.md) | HTTP/3 is the ground floor | Proposed |
+| [0042](0042-ipv6-first.md) | IPv6 first | Proposed |

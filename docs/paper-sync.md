@@ -26,6 +26,16 @@ Remove an item once the paper carries it.
   ([0036](decisions/0036-bounds.md), [0037](decisions/0037-without-prejudice.md),
   [0038](decisions/0038-agreement.md)): new since v0.4. The X.500 lineage of
   bounds belongs beside Appendix B's directory layer.
+- **Robot governance and mandated doors**
+  ([0039](decisions/0039-robot-governance.md),
+  [0040](decisions/0040-deployments-may-mandate-doors.md)): belongs with
+  section 7's "Canadian rules for public agents".
+- **An ask for section 13 (immediate program asks).** Networks the government
+  runs or funds (departments, libraries, schools, community Wi-Fi) should
+  allow HTTP/3 and IPv6, and government services should offer them. Small,
+  cheap, and good for every service, not only Wave. Fits the sovereign
+  broadband theme. ([0041](decisions/0041-http3-ground-floor.md),
+  [0042](decisions/0042-ipv6-first.md))
 - **Courtroom horizon.** The repository records the long-term goal of
   conducting a court proceeding as a Wave
   ([0031](decisions/0031-courtroom-horizon.md)). Wording for the paper is

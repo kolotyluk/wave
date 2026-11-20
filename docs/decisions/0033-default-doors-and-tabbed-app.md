@@ -3,6 +3,7 @@
 - Status: Accepted
 - Date: 2026-11-19
 - Supersedes: [0012](0012-browser-application.md)
+- Amended by: [0040](0040-deployments-may-mandate-doors.md)
 
 ## Context
 
