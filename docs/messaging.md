@@ -34,6 +34,38 @@ journey.
 For a first reader, use the first line and the flight recorder. The rest is
 for those who ask.
 
+## Surfing, the companion image
+
+The road and the flight recorder are for decision-makers: they explain the
+infrastructure and the record. Surfing is for everyone else: it explains what
+working together in a Wave feels like, and the name already says it.
+
+> ***Many boards, one wave.***
+
+- **The wave** is the shared object: one wave, everyone on it, always moving.
+- **The boards** are the doors. Bring your own (the default, a legal-aid
+  agency's, anyone's) and ride the same Wave as everyone else.
+- **Two on a board** is a shared door: a support worker beside someone, a
+  family on one phone, a lawyer and client at one screen.
+- **Body surfing** is the telephone door: riding the wave with no equipment
+  at all.
+- **Dolphins** are the robots: not people, plainly not people, and entirely at
+  home on the wave.
+- **Surf etiquette** is the protocol: right of way, and nobody drops in on
+  someone else's wave.
+
+The two images settle each other. Surfing is the moment of working together,
+live and moving. The road and the recorder are what lasts.
+
+## Have fun
+
+Surfers are inventive and playful, and so is Wave, however serious its work.
+Look for chances to have fun: in names (Prissy, Gort), in documentation, in
+the community around it.
+
+Fun never comes at the expense of a person in difficulty. Someone facing a
+housing crisis or a court gets warmth and clarity, not jokes.
+
 ## Words
 
 - **Canada Wave**: the infrastructure, the network.
