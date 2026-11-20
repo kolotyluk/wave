@@ -1,6 +1,6 @@
 # 0012. The browser application hosts the doors
 
-- Status: Accepted
+- Status: Superseded by [0033](0033-default-doors-and-tabbed-app.md)
 - Date: 2026-11-16
 
 ## Context

@@ -17,7 +17,7 @@ not to be built on. See [0001](0001-record-architecture-decisions.md).
 | [0009](0009-door-interface-modality-independent.md) | The door interface is independent of how the person communicates | Accepted |
 | [0010](0010-robots-same-interface.md) | Robots join through the same interface as people | Accepted |
 | [0011](0011-robot-sandbox.md) | Robots are isolated by the WebAssembly sandbox | Accepted |
-| [0012](0012-browser-application.md) | The browser application hosts the doors | Accepted |
+| [0012](0012-browser-application.md) | The browser application hosts the doors | Superseded by 0033 |
 | [0013](0013-apache-wave-lineage.md) | Apache Wave is lineage and reference, not runtime | Accepted |
 | [0014](0014-invent-only-the-model.md) | Invent only the model; standardize everything else | Accepted |
 | [0015](0015-cbor-and-cose.md) | Operations are encoded in deterministic CBOR and signed with COSE | Proposed |
@@ -38,3 +38,6 @@ not to be built on. See [0001](0001-record-architecture-decisions.md).
 | [0030](0030-one-image-through-stages.md) | One container image moves through every stage | Accepted |
 | [0031](0031-courtroom-horizon.md) | The architecture contemplates replacing the courtroom | Accepted |
 | [0032](0032-verifiable-views.md) | Views are verifiable projections of the record | Proposed |
+| [0033](0033-default-doors-and-tabbed-app.md) | Default doors, replaceable shells, and a tabbed app | Accepted |
+| [0034](0034-responsive-web-phone-first.md) | One responsive web app, phone-first for the Front Door | Proposed |
+| [0035](0035-front-door-agent-is-a-robot.md) | The Front Door agent is an ordinary robot | Proposed |

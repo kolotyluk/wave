@@ -1,4 +1,4 @@
-# Wave architecture
+ # Wave architecture
 
 This document describes Wave as it stands. It is edited freely. The reasons
 behind it are in the [decision records](decisions/README.md), which are not.
@@ -20,6 +20,13 @@ named participants and a browser application that lets a person work with the
 record by conversation or by looking at its structure.
 
 The agent never hides the record it is working on.
+
+Google Wave's model was sound, but its interface showed people the machinery
+and too many could not fathom it. The Front Door hides that complexity for
+simple tasks and for anyone who does not want to see it, at least not all the
+time; the Side Door keeps it one tab away. The complexity is hidden for
+convenience, never for secrecy. In 2009 nothing could translate between a
+person and the structure. An AI agent now can.
 
 The quality goals, in order of dependence:
 
@@ -71,13 +78,25 @@ flowchart LR
     witness[Independent<br/>witness]
     court([Court or<br/>reviewing expert])
 
-    subgraph wave [Wave]
-        door[Doors<br/>Front Door, Side Door]
-        server[Wave server]
+    subgraph doors [Doors: any shell that conforms]
+        direction TB
+        front["Front Door<br/>default: conversation,<br/>text and voice"]
+        side["Side Door<br/>default: GUI<br/>Waves, wavelets, history"]
+        alt["Other shells<br/>from other agencies"]
     end
 
-    person -- "plain language,<br/>or direct view" --> door
-    door -- "signed operations,<br/>queries" --> server
+    agent["Wave AI agent<br/>an ordinary robot,<br/>acting for the person"]
+    model[Language model<br/>outside Wave]
+    server[Wave server]
+
+    person --> front
+    person --> side
+    person --> alt
+    front <-- "what the person means,<br/>what Wave answers" --> agent
+    agent -. "granted capability" .-> model
+    agent -- "signed operations,<br/>as robot for person" --> server
+    side -- "signed operations,<br/>queries" --> server
+    alt -- "same protocol" --> server
     robot -- "signed operations,<br/>same interface" --> server
     server <-- "federation" --> other
     server -- "checkpoints" --> tsa
@@ -85,9 +104,30 @@ flowchart LR
     server -- "exported record" --> court
 ```
 
-People reach Wave through a door. Robots join through the same interface as
-people. Servers federate with one another. Time and witnessing come from
-outside the operator, so that an exported record can be checked by anyone.
+People reach Wave through a door. The default Front Door is a conversation
+with the Wave-supplied AI agent, which is an ordinary robot acting for the
+person, with access to a language model outside Wave as a granted capability
+([0035](decisions/0035-front-door-agent-is-a-robot.md)). The default Side Door
+is a GUI over the raw record. Either may be
+replaced by a shell from another agency that conforms to the protocol and the
+design principles. Robots join through the same interface as people. Servers
+federate with one another. Time and witnessing come from outside the
+operator, so that an exported record can be checked by anyone.
+([0033](decisions/0033-default-doors-and-tabbed-app.md))
+
+### The default app
+
+```mermaid
+flowchart TB
+    subgraph app ["wave-app: tabbed shell"]
+        direction LR
+        t1["Front Door tab<br/>AI agent"]
+        t2["Side Door tab<br/>raw GUI"]
+        t3["Split tab<br/>both, same Wave"]
+        t4["Other tabs<br/>later"]
+    end
+    app --> server[Wave server]
+```
 
 ## 4. Building blocks
 
@@ -119,10 +159,10 @@ flowchart TB
 | `wave-protocol` | The messages and operations that servers, doors and robots exchange, and the rules for encoding them. Nothing else. No dependencies. ([0017](decisions/0017-protocol-definition.md)) |
 | `wave-core` | The shared object: document, operations, history, replay, permissions. No input or output. Source compiled into every component, so the server and the browser run the same code. |
 | `wave-server` | Admits, stores and relays operations. Keeps the append-only record. The authority on admission, not on order. ([0005](decisions/0005-authority-on-admission.md), [0006](decisions/0006-server-as-webassembly-in-container.md)) |
-| `wave-door` | The Front Door, and the interface every door must meet, independent of screen or voice. ([0007](decisions/0007-front-door.md), [0009](decisions/0009-door-interface-modality-independent.md)) |
-| `wave-side` | The minimal Side Door: a read-only view of structure, permissions, participants and history. ([0008](decisions/0008-side-door-early.md)) |
+| `wave-door` | The default Front Door, the Wave-supplied AI agent, and the interface every door must meet, independent of screen or voice. ([0007](decisions/0007-front-door.md), [0009](decisions/0009-door-interface-modality-independent.md)) |
+| `wave-side` | The default Side Door, a GUI: at first a read-only view of structure, permissions, participants and history. ([0008](decisions/0008-side-door-early.md)) |
 | `wave-robot` | The participant interface for robots, and the sandbox that hosts them. ([0010](decisions/0010-robots-same-interface.md), [0011](decisions/0011-robot-sandbox.md)) |
-| `wave-app` | The browser application. Hosts the doors, with door mode, raw mode and a split screen. ([0012](decisions/0012-browser-application.md)) |
+| `wave-app` | The browser application: a tabbed shell hosting the Front Door, the Side Door, a split view and other tabs. Holds no door logic. ([0033](decisions/0033-default-doors-and-tabbed-app.md)) |
 
 ## 5. Runtime
 
