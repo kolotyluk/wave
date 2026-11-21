@@ -46,6 +46,22 @@ Remove an item once the paper carries it.
   delegation; graduated enforcement with appeal. Fines need statutory
   authority, which fits section 8's integrity offences and graduated
   liability.
+- **A Canada Wave Act**, to be drafted later and offered with the paper,
+  perhaps as the paper's "possible Digital Village Act" (section 6) made
+  concrete. Provisions collected so far:
+  - confidentiality of sentry communications, opened only on court order
+    (section 7);
+  - integrity offences and fines for impersonation and multiple identities
+    ([0047](decisions/0047-one-person-one-identity.md));
+  - recognition of robot agreements made for a principal
+    ([0038](decisions/0038-agreement.md)), and of without-prejudice protection
+    for what an opposing party's agent sees
+    ([0037](decisions/0037-without-prejudice.md));
+  - evidentiary standing for Wave records: a presumption of integrity under
+    the Canada Evidence Act's provisions for electronic records
+    ([0022](decisions/0022-evidentiary-record.md));
+  - scoped lawful disclosure with no standing back door;
+  - HTTP/3 and IPv6 on networks the government runs or funds.
 - **Courtroom horizon.** The repository records the long-term goal of
   conducting a court proceeding as a Wave
   ([0031](decisions/0031-courtroom-horizon.md)). Wording for the paper is
