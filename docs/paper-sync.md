@@ -36,6 +36,10 @@ Remove an item once the paper carries it.
   cheap, and good for every service, not only Wave. Fits the sovereign
   broadband theme. ([0041](decisions/0041-http3-ground-floor.md),
   [0042](decisions/0042-ipv6-first.md))
+- **Documentation** ([0044](decisions/0044-documentation.md)): four books
+  (Wave Rider, Wave Shape, Wave Meister, Wave Reference) and a Principles of
+  Operation as the written specification. Strengthens section 9's standards
+  path: a public, normative spec with conformance tests.
 - **Courtroom horizon.** The repository records the long-term goal of
   conducting a court proceeding as a Wave
   ([0031](decisions/0031-courtroom-horizon.md)). Wording for the paper is

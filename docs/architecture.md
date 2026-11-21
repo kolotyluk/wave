@@ -275,6 +275,14 @@ person can always see their own record. *Proposed.*
 [0040](decisions/0040-deployments-may-mandate-doors.md),
 [robot governance](robot-governance.md))
 
+### Data
+
+The log is the truth: its tail is appended in PostgreSQL and periodically
+sealed into object storage, time-stamped and witnessed. Blobs live in object
+storage, named by hash and individually encrypted. Everything else is derived
+and rebuildable. Storage is the host's business; scaling is by federation.
+*Proposed.* ([0043](decisions/0043-data-strategy.md), [data](data.md))
+
 ### Identity
 
 No passwords. Passkeys for people. Assurance on a spectrum from anonymous to

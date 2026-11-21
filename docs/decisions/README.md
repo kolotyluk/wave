@@ -48,3 +48,5 @@ not to be built on. See [0001](0001-record-architecture-decisions.md).
 | [0040](0040-deployments-may-mandate-doors.md) | A deployment may mandate its doors | Proposed |
 | [0041](0041-http3-ground-floor.md) | HTTP/3 is the ground floor | Proposed |
 | [0042](0042-ipv6-first.md) | IPv6 first | Proposed |
+| [0043](0043-data-strategy.md) | The log is the truth; everything else is referenced or derived | Proposed |
+| [0044](0044-documentation.md) | Documentation to the standard of the Principles of Operation | Proposed |

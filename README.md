@@ -95,9 +95,13 @@ housing problem, helped in plain language, with a complete record they keep.
 
 ## Documentation
 
+The four books (Wave Rider, Wave Shape, Wave Meister and Wave Reference) are
+planned ([0044](docs/decisions/0044-documentation.md)). Until then:
+
 - [Architecture](docs/architecture.md): the system as it stands.
 - [Decision records](docs/decisions/README.md): why it is that way, and what is
   still open for debate.
+- [Data](docs/data.md): logs, blips, artifacts, and what PostgreSQL is for.
 - [Environments](docs/environments.md): Ztuph Wave, the development and
   demonstration instance.
 - [Robot governance](docs/robot-governance.md): how AI robots are governed.
