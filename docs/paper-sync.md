@@ -51,8 +51,19 @@ Remove an item once the paper carries it.
   concrete. Provisions collected so far:
   - confidentiality of sentry communications, opened only on court order
     (section 7);
-  - integrity offences and fines for impersonation and multiple identities
+  - integrity offences for the gaps the Criminal Code leaves: fictitious or
+    multiple identities (s. 403 covers personating a real person, not
+    inventing one), undisclosed representation, robots passed off as people,
+    and manipulation of counted civic processes such as consultations, where
+    no one is deprived of property and fraud (s. 380) may not apply
     ([0047](decisions/0047-one-person-one-identity.md));
+  - enforcement in three tiers: the user agreement and membership rules for
+    warnings, restrictions and loss of access; administrative monetary
+    penalties under the Act, with appeal; and the Criminal Code, unchanged,
+    for impersonation, forgery, tampering, fraud and perjury;
+  - an offence for knowingly false attested statements made in Wave, for
+    statements not sworn before an authorized official (see "Sworn statement"
+    and "Attested statement" in [features](features.md));
   - recognition of robot agreements made for a principal
     ([0038](decisions/0038-agreement.md)), and of without-prejudice protection
     for what an opposing party's agent sees
