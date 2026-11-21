@@ -2,6 +2,7 @@
 
 - Status: Accepted
 - Date: 2026-11-19
+- Amended by: [0046](0046-passwords-scope.md)
 
 ## Context
 

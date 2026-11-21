@@ -40,6 +40,12 @@ Remove an item once the paper carries it.
   (Wave Rider, Wave Shape, Wave Meister, Wave Reference) and a Principles of
   Operation as the written specification. Strengthens section 9's standards
   path: a public, normative spec with conformance tests.
+- **Identity and the user agreement**
+  ([0047](decisions/0047-one-person-one-identity.md)): one person, one
+  identity; a user agreement to act only as oneself or through recorded
+  delegation; graduated enforcement with appeal. Fines need statutory
+  authority, which fits section 8's integrity offences and graduated
+  liability.
 - **Courtroom horizon.** The repository records the long-term goal of
   conducting a court proceeding as a Wave
   ([0031](decisions/0031-courtroom-horizon.md)). Wording for the paper is

@@ -50,3 +50,6 @@ not to be built on. See [0001](0001-record-architecture-decisions.md).
 | [0042](0042-ipv6-first.md) | IPv6 first | Proposed |
 | [0043](0043-data-strategy.md) | The log is the truth; everything else is referenced or derived | Proposed |
 | [0044](0044-documentation.md) | Documentation to the standard of the Principles of Operation | Proposed |
+| [0045](0045-postgresql-schemas.md) | PostgreSQL schemas follow authority and lifecycle | Proposed |
+| [0046](0046-passwords-scope.md) | No one has to remember a password; infrastructure avoids them too | Accepted |
+| [0047](0047-one-person-one-identity.md) | One person, one identity | Accepted |

@@ -285,12 +285,15 @@ and rebuildable. Storage is the host's business; scaling is by federation.
 
 ### Identity
 
-No passwords. Passkeys for people. Assurance on a spectrum from anonymous to
+No one remembers a password; passkeys for people. One person, one identity,
+with aliases and pseudonyms tied back to it. Assurance on a spectrum from anonymous to
 the highest a deployment needs, attached to actions rather than to people.
 Recovery low-friction until security matters. Doors without a passkey gather
 evidence until it meets the standard the action needs.
 ([0020](decisions/0020-no-passwords.md),
-[0021](decisions/0021-identity-assurance-spectrum.md))
+[0021](decisions/0021-identity-assurance-spectrum.md),
+[0046](decisions/0046-passwords-scope.md),
+[0047](decisions/0047-one-person-one-identity.md))
 
 ## 8. Deployment
 
@@ -330,7 +333,14 @@ In the order they block work:
    ([0041](decisions/0041-http3-ground-floor.md),
    [0042](decisions/0042-ipv6-first.md))
 
-Items 2 to 4 precede the first test vector and the endpoints.
+7. **Sealed manifest authority:** what proves the sealed record if PostgreSQL
+   is lost. ([0045](decisions/0045-postgresql-schemas.md))
+8. **Acknowledgement durability:** which of the three levels an
+   acknowledgement promises. ([0043](decisions/0043-data-strategy.md))
+
+Items 2 to 4 precede the first test vector and the endpoints; Oz's [database
+review](reviews/2026-11-21-oz-database.md) lists what precedes the first
+migration.
 
 ## Deferred, not forgotten
 
