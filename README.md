@@ -107,6 +107,7 @@ planned ([0044](docs/decisions/0044-documentation.md)). Until then:
 - [Robot governance](docs/robot-governance.md): how AI robots are governed.
 - [Features](docs/features.md): configurations of capabilities.
 - [Messaging](docs/messaging.md): how Wave is explained, at three levels.
+- [Reviews](docs/reviews/): reviews by Oz and others, kept as written.
 - [Paper sync](docs/paper-sync.md): what the discussion paper still needs
   from this repository.
 - [Test vectors](vectors/README.md): the language-neutral statement of the

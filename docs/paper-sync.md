@@ -40,6 +40,39 @@ Remove an item once the paper carries it.
   (Wave Rider, Wave Shape, Wave Meister, Wave Reference) and a Principles of
   Operation as the written specification. Strengthens section 9's standards
   path: a public, normative spec with conformance tests.
+- **Identity and the user agreement**
+  ([0047](decisions/0047-one-person-one-identity.md)): one person, one
+  identity; a user agreement to act only as oneself or through recorded
+  delegation; graduated enforcement with appeal. Fines need statutory
+  authority, which fits section 8's integrity offences and graduated
+  liability.
+- **A Canada Wave Act**, to be drafted later and offered with the paper,
+  perhaps as the paper's "possible Digital Village Act" (section 6) made
+  concrete. Provisions collected so far:
+  - confidentiality of sentry communications, opened only on court order
+    (section 7);
+  - integrity offences for the gaps the Criminal Code leaves: fictitious or
+    multiple identities (s. 403 covers personating a real person, not
+    inventing one), undisclosed representation, robots passed off as people,
+    and manipulation of counted civic processes such as consultations, where
+    no one is deprived of property and fraud (s. 380) may not apply
+    ([0047](decisions/0047-one-person-one-identity.md));
+  - enforcement in three tiers: the user agreement and membership rules for
+    warnings, restrictions and loss of access; administrative monetary
+    penalties under the Act, with appeal; and the Criminal Code, unchanged,
+    for impersonation, forgery, tampering, fraud and perjury;
+  - an offence for knowingly false attested statements made in Wave, for
+    statements not sworn before an authorized official (see "Sworn statement"
+    and "Attested statement" in [features](features.md));
+  - recognition of robot agreements made for a principal
+    ([0038](decisions/0038-agreement.md)), and of without-prejudice protection
+    for what an opposing party's agent sees
+    ([0037](decisions/0037-without-prejudice.md));
+  - evidentiary standing for Wave records: a presumption of integrity under
+    the Canada Evidence Act's provisions for electronic records
+    ([0022](decisions/0022-evidentiary-record.md));
+  - scoped lawful disclosure with no standing back door;
+  - HTTP/3 and IPv6 on networks the government runs or funds.
 - **Courtroom horizon.** The repository records the long-term goal of
   conducting a court proceeding as a Wave
   ([0031](decisions/0031-courtroom-horizon.md)). Wording for the paper is

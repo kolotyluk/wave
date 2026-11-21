@@ -61,11 +61,22 @@ Wave hosts. Nothing else on the network is exposed.
 
 On TrueNAS:
 
-- **PostgreSQL 17** (17.12, Debian bookworm image), already running as a
-  TrueNAS app. `wave1` and `wave2` each get their own database and their own
-  credentials on it, so that the federation test shares nothing but the
-  protocol. Minor updates are routine; a major-version upgrade (to 18) needs a
-  proper data upgrade, not just an app update.
+- **PostgreSQL 18.7**, a separate instance on TrueNAS, with pgvector 0.8.7
+  available but not enabled. Set up with Oz on 2026-11-21; see the [database
+  review](reviews/2026-11-21-oz-database.md).
+  - Database `wave`. Role `wave_owner` owns objects and cannot log in. Role
+    `wave_app` is the runtime login: it can connect and use the schema, but
+    cannot create schemas or temporary tables, manage roles or create
+    databases, and is not a member of `wave_owner`.
+  - No application schemas or tables yet.
+  - Credentials live outside the repository. The development login uses a
+    generated password, which development tolerates
+    ([0046](decisions/0046-passwords-scope.md)).
+  - For federation, `wave1` and `wave2` get separate databases and roles. One
+    PostgreSQL server still shares infrastructure and administrator trust, so
+    it does not test independent failure domains.
+  - A single instance has no synchronous replica: development durability is
+    "committed on one server" only ([0043](decisions/0043-data-strategy.md)).
 - **Object storage**, S3-compatible, as a TrueNAS Docker app: Garage or
   SeaweedFS, to be evaluated. MinIO's community edition is no longer
   maintained.

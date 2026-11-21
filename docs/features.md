@@ -26,7 +26,8 @@ still need a decision of their own.
 | Replayable history | Every change is kept, attributed, and can be played back. | [0004](decisions/0004-crdt-convergence.md), [0043](decisions/0043-data-strategy.md) |
 | Evidentiary record | Integrity can be proved to a hostile expert without trusting the operator. | [0022](decisions/0022-evidentiary-record.md) |
 | Acting for | A robot, or a person, acts for a principal, and the record shows both. | [0029](decisions/0029-signed-operation-envelope.md) |
-| Identity assurance | From anonymous to verified, as each action needs; no passwords. | [0020](decisions/0020-no-passwords.md), [0021](decisions/0021-identity-assurance-spectrum.md) |
+| Identity assurance | From anonymous to verified, as each action needs; no one remembers a password. | [0020](decisions/0020-no-passwords.md), [0021](decisions/0021-identity-assurance-spectrum.md), [0046](decisions/0046-passwords-scope.md) |
+| One person, one identity | Aliases and pseudonyms tie back to one person; no one appears as many. | [0047](decisions/0047-one-person-one-identity.md) |
 | Verifiable views | Each credential sees what it may, and every view still verifies. | [0032](decisions/0032-verifiable-views.md) |
 | Bounds | Visible demarcations with declared rules. | [0036](decisions/0036-bounds.md) |
 | Without prejudice | Seen by those inside, never used against them. | [0037](decisions/0037-without-prejudice.md) |
@@ -117,6 +118,31 @@ Capabilities: identity assurance, doors.
 **Step-up.** A sensitive action asks for more assurance than the person has
 shown so far, and only then.
 Capabilities: identity assurance.
+
+**User agreement.** Each person agrees to act only as themselves, or as a
+declared delegate (for example under a power of attorney) through recorded
+delegation. Acceptance is signed and recorded;
+violations lead to graduated consequences with notice and appeal.
+Capabilities: agreement, one person one identity, moderation.
+
+**Sworn statement.** An affidavit, solemn declaration or testimony made in a
+Wave, under oath or affirmation administered by an official authorized by law
+(a commissioner for taking affidavits, a notary, a court officer), so that
+perjury law (Criminal Code s. 131) applies. A visible "sworn" bound; the
+declarant identified at high assurance, never by pseudonym or delegate, and
+never a robot (an agent may help draft, only a person swears); the official's
+authority verified as a credential; the oath, warnings in both official
+languages, the statement and the official's jurat recorded as signed
+operations; corrections only by a new sworn statement. Whether an oath may be
+administered remotely depends on the jurisdiction.
+Capabilities: bounds, identity assurance, agreement, authority granted by law
+([0031](decisions/0031-courtroom-horizon.md)).
+
+**Attested statement.** "I declare this is true", signed by the person, with
+the warning shown, and no official present. Not perjury, but a clear record of
+what was asserted and when; accountability comes from the user agreement, and
+could come from a Wave Act offence.
+Capabilities: bounds, identity assurance, agreement.
 
 **Recovery.** Regaining access: easy at the low end, demanding where security
 matters.
