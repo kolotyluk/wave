@@ -53,3 +53,4 @@ not to be built on. See [0001](0001-record-architecture-decisions.md).
 | [0045](0045-postgresql-schemas.md) | PostgreSQL schemas follow authority and lifecycle | Proposed |
 | [0046](0046-passwords-scope.md) | No one has to remember a password; infrastructure avoids them too | Accepted |
 | [0047](0047-one-person-one-identity.md) | One person, one identity | Accepted |
+| [0049](0049-postgresql-backed-delivery.md) | PostgreSQL handles durable delivery; external event brokers wait | Accepted |

@@ -89,6 +89,19 @@ and [0032](decisions/0032-verifiable-views.md).
 
 ## Durability
 
+### Background delivery
+
+Durable background work and delivery initially use PostgreSQL, not Kafka or
+another external broker ([0049](decisions/0049-postgresql-backed-delivery.md)).
+Use a transactional outbox, retryable workers, and idempotent consumers.
+Consumer effects and progress commit together where they share a database;
+external effects need their own duplicate-handling strategy. Notifications
+are wake-up hints, not durable queues. Reconsider an external stream when
+measured requirements justify it. Blobs and sealed history remain in object
+storage.
+
+### Acknowledgement levels
+
 Three levels, never confused: committed on one server; acknowledged by a
 synchronous replica; sealed, time-stamped and witnessed. An acknowledgement
 says which level it reached. A single development instance reaches only the
