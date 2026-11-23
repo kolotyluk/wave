@@ -60,6 +60,24 @@ robot whose charter lacks them.
   others will see.
 - **Be kind.** People reach a Wave in difficulty more often than not.
 
+## Intrinsic robots
+
+Proposed in [0048](decisions/0048-server-identity-and-intrinsic-robots.md):
+a deployment's own robots (`.fraud`, `.moderator`, `.archivist`,
+`.timekeeper`, `.courier`) act for its declared identity. Their names grant
+no privileges. The default Front Door agent still acts for the person,
+not for its operator.
+
+Robot roles and purposes are disclosed in the deployment's rules and user
+agreement. Actual participation is collapsed by default but discoverable
+to authorized viewers; lists and counts must not expose protected scopes.
+The same enforced constraints and required charter rules apply as to other
+robots; recommendations remain recommendations.
+
+Fraud flags are not findings, and neither they nor the underlying evidence
+may cross a bound without the applicable authority. Send them only to
+authorized human reviewers; intrinsic status is not a monitoring back door.
+
 ## Deployment rules
 
 A deployment adds rules of its own, and may mandate doors
