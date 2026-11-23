@@ -34,6 +34,7 @@ still need a decision of their own.
 | Agreement | Participants, robots included, make and honour agreements for principals. | [0038](decisions/0038-agreement.md) |
 | Robot participation | Robots join as participants, sandboxed, with no other way in. | [0010](decisions/0010-robots-same-interface.md), [0011](decisions/0011-robot-sandbox.md) |
 | Robot governance | Enforced constraints, and a published charter recorded with every act. | [0039](decisions/0039-robot-governance.md) |
+| Intrinsic robots | Proposed: a deployment's robots act for its declared identity; collapsed by default, discoverable to authorized viewers. | [0048](decisions/0048-server-identity-and-intrinsic-robots.md) |
 | Doors | Ways in for every person, replaceable or mandated by deployment. | [0033](decisions/0033-default-doors-and-tabbed-app.md), [0040](decisions/0040-deployments-may-mandate-doors.md) |
 | Asking | Questions never change the record. | [0018](decisions/0018-asking-and-changing.md) |
 | Portability | A Wave exports whole, verifiable offline, and can leave a provider. | [0022](decisions/0022-evidentiary-record.md), [0043](decisions/0043-data-strategy.md) |
@@ -169,6 +170,13 @@ Capabilities: acting for, robot governance, time and notice.
 **Draft, don't send.** The agent drafts in the person's private wavelet; nothing
 leaves until they choose.
 Capabilities: acting for, verifiable views.
+
+**Fraud watch (proposed).** `.fraud`, an intrinsic robot, looks for signs of
+fraud and multiple identities and flags them to an authorized person for
+moderation. It never decides rights or treats its flags as findings.
+Neither source evidence nor derived flags leave their bound without the
+required authority.
+Capabilities: intrinsic robots, one person one identity, moderation.
 
 **Sentry.** A personal robot that watches on its principal's behalf and warns
 them privately.
