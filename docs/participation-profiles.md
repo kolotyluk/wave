@@ -33,6 +33,16 @@ Each Wave needs an explicit configuration covering several independent concerns:
 These may be governed at different scopes. The proposal is a Wave-level profile with explicitly permitted wavelet-specific interaction and delivery settings. Scope inheritance and precedence require specification; local settings must not override enclosing confidentiality or authority restrictions.
 
 Example: a public consultation could combine anonymous reading, identified or pseudonymous submissions, identity-checked voting, no individual presence display, and optional topic subscriptions. These choices are not implied by the Swarm label.
+### Swarm provisioning authority
+**Proposed default: creating a Swarm Wave, changing Normal to Swarm, or increasing its resource allocation requires an explicit deployment-level resource-administration grant.** Ordinary Wave-creation rights, content ownership, and moderation authority do not imply this grant. A deployment may delegate it with bounded scope and budgets rather than requiring a global administrator for every request.
+
+The resource authority authorizes an operational envelope, not unlimited consumption: an accountable sponsor, approved scope, concurrency/storage/processing/fan-out budgets, and any expiry or review conditions. Check both the requester's grant and available deployment capacity when activating or enlarging the allocation. Concurrent requests must not each consume the same remaining budget.
+
+Keep resource authority separate from content authority. Approving capacity does not grant access to private contributions, permit publication, confer moderation powers, or override a bound. Likewise, a Wave's owner or robot cannot bypass provisioning policy by changing a profile label or opening many Normal Waves; deployment-wide quotas apply across profiles.
+
+Record approvals and changes with appropriate attribution and visibility, without exposing protected sponsor identities or operational secrets. If approval is denied or capacity is unavailable, return an explicit outcome rather than silently activating an underprovisioned Swarm. A popularity threshold can prompt a capacity request, never self-authorize an upgrade.
+
+Expiry or revocation needs a declared operational policy: restricting new work or resizing resources must not erase admitted evidence, silently reduce acknowledged durability, or become an undocumented content sanction. Exact grants, sponsor obligations, approval/appeal process, and safe wind-down behavior remain design questions.
 ## 3. Define what is being counted
 Distinguish:
 - **Authorized actors:** people, institutions and robots with rights to perform particular actions; attribution records the signer and represented principal as appropriate.
@@ -140,6 +150,7 @@ Previously disclosed public material cannot be recalled merely by switching prof
 A profile change is proposed as an authorized, signed policy operation with a version, effective point, and recorded rationale. This requires envelope/policy details still to be specified.
 
 Before applying one:
+- Obtain the applicable resource-administration approval and capacity allocation for Swarm activation or expansion, separately from authority to change the Wave's participation policy.
 - Identify affected scopes, rights, subscriptions, pending contributions, and required notices or agreements.
 - Preserve existing authority, consent, confidentiality, and history. Changing to Swarm does not make a Wave public; changing to Normal does not eject participants.
 - Define how clients discover the new policy and recover from stale configuration. Authority-changing requests must be checked against current policy at admission.
@@ -177,7 +188,7 @@ No participant capacity is claimed until measured. Evaluate at least:
 Measure admission latency and throughput, connection/fan-out cost, backlog age, replay time, resource usage, failover behavior and fairness. Trust checks include signature/receipt integrity, no unauthorized disclosure, no duplicated effects, and no loss of acknowledged admitted evidence within the stated failure guarantee.
 
 Decisions needed before implementation:
-1. Profile scope, inheritance, configuration format, and change authority.
+1. Profile scope, inheritance, configuration format, change authority, and separate Swarm resource-administration grants, budgets, and expiry/revocation behavior.
 2. What the initial Normal target measures: active editors, actors, clients, or another workload measure.
 3. Anonymous contribution envelopes, agreement acceptance, status recovery, and abuse controls.
 4. Subscription filters, cursor scope, resumption, and any formal notice obligations.
