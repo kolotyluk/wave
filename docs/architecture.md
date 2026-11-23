@@ -215,6 +215,17 @@ body. It can never alter the record.
 
 ## 6. Interfaces
 
+### Proposed participation profiles
+
+[Normal and Swarm](participation-profiles.md) are proposed configurations
+of one protocol: small-group collaboration and large-scale participation,
+respectively. Identity, visibility, subscription and action permissions
+remain independent policies. Both retain the same trust and security
+requirements. The profiles, thresholds and transition rules remain open
+for review; they are not implemented capabilities.
+
+### Protocol and host interfaces
+
 - **HTTP API with CBOR bodies**, media type `application/wave+cbor`, with a
   JSON view by content negotiation. Drafts only, for debate.
   ([0016](decisions/0016-media-type.md), [0023](decisions/0023-http-api-cbor.md))
@@ -231,6 +242,18 @@ body. It can never alter the record.
   [0005](decisions/0005-authority-on-admission.md).
 
 ## 7. Cross-cutting concerns
+### Attack resistance
+
+Denial-of-service resistance and security apply to every Wave, not just
+large public deployments. Bound ingress, expensive processing, storage,
+queues and fan-out; preserve authorization and truthful acknowledgements
+under overload. Authenticated participants, robots and federation peers
+are not exempt. Network saturation also requires host/provider mitigation;
+application rate limits alone are insufficient.
+([0050](decisions/0050-attack-resistance.md))
+
+The requirement is accepted; concrete controls and capacity guarantees
+remain to be designed and tested.
 
 ### Encoding and signing
 
