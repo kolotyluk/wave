@@ -89,6 +89,35 @@ Inference is processing of personal information: it needs notice in the
 deployment's privacy terms, and suspected links are protected like the rest
 of the identity directory.
 
-Open: how pairwise identifiers are derived and kept stable across a change of
-home, and how federated servers resolve them for routing without learning the
-root.
+## Open questions
+
+- **Pairwise identifiers.** How they are derived and kept stable across a
+  change of home, and how federated servers resolve them for routing without
+  learning the root.
+- **People with no ID, phone or fixed address.** A person with a housing
+  problem may be using a library computer, with no smartphone and no
+  government ID to hand. Knowledge factors (eye colour, hair colour, date of
+  birth, high school) are easy for them to give, but are known to exactly the
+  people a vulnerable person may need to keep out, such as an abusive partner
+  or relative, and often appear online or in breached data. Proposed: such
+  factors are one signal among several and can unlock low-risk actions
+  (continuing one's own conversation, reading general advice), never
+  sensitive content or acting on the person's behalf. Stronger options for
+  this person: a FIDO security key issued by a trusted intermediary (library,
+  shelter, legal aid, Service BC), which works as a passkey on a shared
+  computer with nothing stored there; a printed card with a one-time setup
+  code issued in person, like BC's Token; vouching by an intermediary at the
+  assurance their role allows; and shared-computer hygiene (no saved login,
+  sessions that end with the browser).
+- **Minors and guardians.** Who acts for a child, and how and when the child
+  takes over their own identity.
+- **Incapacity and death.** When a power of attorney takes effect, what
+  becomes of an identity when its person dies, and who may act for an
+  estate. The record outlives the person.
+- **Name changes.** After a legal name change or a change of gender identity,
+  the identity is the same and the displayed name changes; earlier signed
+  statements stay verifiable without exposing the former name where it
+  should not be seen.
+- **Key compromise.** Every key has a recorded revocation time, so that what a
+  person genuinely signed before a theft stays valid, and nothing signed with
+  the stolen key afterwards is accepted.
