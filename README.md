@@ -89,6 +89,9 @@ housing problem, helped in plain language, with a complete record they keep.
 - ***Those among us who are the most vulnerable require the most
   consideration and protection.*** Wave protects people in proportion to the
   harm they would suffer if it failed them.
+- ***When Wave fails, people can die.*** Wave is a mission-critical service:
+  it fails safe, keeps confidentiality closed and the record preserved, and
+  is never mistaken for an emergency service.
 - **If you don't have WebAssembly, you don't have Wave.**
 - **Invent only the model; standardize everything else.**
 - **No back door.** Robots and people enter by the same interface.

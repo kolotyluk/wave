@@ -33,6 +33,11 @@ most vulnerable require the most consideration and protection.*** A woman
 fleeing abuse, looking for housing and caring for children, at a library
 computer with no phone, is the person the design must not fail.
 
+***When Wave fails, people can die*** ([0055](decisions/0055-mission-critical.md)).
+Wave is mission-critical: confidentiality fails closed, the record fails
+preserved, availability degrades gracefully, and Wave is never an emergency
+service.
+
 The quality goals, in order of dependence:
 
 1. **Quality.** The code that keeps the record is correct, and can be shown to
