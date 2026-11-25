@@ -288,6 +288,13 @@ are in [features](features.md). *Proposed.*
 ([0036](decisions/0036-bounds.md), [0037](decisions/0037-without-prejudice.md),
 [0038](decisions/0038-agreement.md))
 
+### Disputes
+
+Wave is prepared for fraud and confusion. A dispute is a recorded claim with
+evidence and a status, resolved by a person with authority and due process;
+nothing disputed is overwritten. *Proposed.*
+([0054](decisions/0054-disputes.md))
+
 ### Robot governance
 
 Robots are governed in two layers: constraints the architecture enforces, and

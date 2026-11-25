@@ -59,3 +59,4 @@ not to be built on. See [0001](0001-record-architecture-decisions.md).
 | [0051](0051-admin-wave.md) | The Admin Wave: a server is administered through a Wave | Proposed |
 | [0052](0052-authentication-keys.md) | People authenticate with keys: passkeys, device signing keys, and SSH-style doors | Proposed |
 | [0053](0053-person-identifiers-and-aliases.md) | Person identifiers stay private; aliases are proven, never assumed | Proposed |
+| [0054](0054-disputes.md) | Disputes are recorded and resolved, never overwritten | Proposed |

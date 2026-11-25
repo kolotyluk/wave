@@ -44,6 +44,7 @@ still need a decision of their own.
 | Erasure | Content can be lawfully destroyed while the record proves it existed. | [0029](decisions/0029-signed-operation-envelope.md), [0043](decisions/0043-data-strategy.md) |
 | Federation | Servers share Waves, each Wave with a home whose admission is final. | [0005](decisions/0005-authority-on-admission.md), *open* |
 | Time and notice | Dates that matter (deadlines, hearings, expiries) are known to the Wave, and people are told in time, through any door. | *not yet recorded* |
+| Disputes | Claims that something is wrong are recorded with evidence and status, and resolved by a person with authority; nothing is overwritten. | [0054](decisions/0054-disputes.md) |
 | Escalation | A matter passes to a person (a caseworker, a lawyer, legal aid) with its record, by the principal's choice. | *not yet recorded* |
 | Referral directory | Trusted services, sources and authorities can be found and cited. The paper's X.500/LDAP directory layer. | *not yet recorded* |
 | Language and accessibility | Both official languages, translation that marks which text is authoritative, and access for every ability. | *not yet recorded* |

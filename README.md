@@ -92,6 +92,9 @@ housing problem, helped in plain language, with a complete record they keep.
 - **No passwords, ever.**
 - **The record is evidence.** It can withstand scrutiny by a court of law,
   and in some cases a stronger standard.
+- **Prepared for fraud and confusion.** Who said what can always be shown.
+  Disputes are recorded and resolved, never settled by overwriting: a
+  corrected mistake stays visible as a corrected mistake.
 
 ## Documentation
 

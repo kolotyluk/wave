@@ -49,6 +49,28 @@ identity whose keys it does not hold.
 - **Rejected:** the person has said "not me". Wave remembers, and stops
   asking or treating it as suspicious.
 
+Illustration, in Rust, of how the states make a link without proof
+impossible to construct:
+
+```rust
+/// How an alias relates to a person's root identity.
+pub enum AliasState {
+    /// Proven by the person while authenticated.
+    Linked { proof: Proof, linked_at: Timestamp },
+    /// Inferred by Wave. Private to the identity service; never a finding.
+    Suspected { signals: Vec<Signal>, since: Timestamp },
+    /// The person said "not me". Remembered so Wave stops asking.
+    Rejected { by: Principal, at: Timestamp },
+}
+
+/// What proved control of an alias. Each refers to its record.
+pub enum Proof {
+    EmailCode(OperationId),
+    DnsRecord(OperationId),
+    AuthorizedDecision { by: Principal, record: OperationId },
+}
+```
+
 **Nothing is linked automatically.** People share names, families share
 domains and mailboxes, and addresses are recycled. A wrong merge is worse
 than a missed link. Merges happen by proof of control, or by a recorded
