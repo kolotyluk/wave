@@ -27,6 +27,8 @@ still need a decision of their own.
 | Evidentiary record | Integrity can be proved to a hostile expert without trusting the operator. | [0022](decisions/0022-evidentiary-record.md) |
 | Acting for | A robot, or a person, acts for a principal, and the record shows both. | [0029](decisions/0029-signed-operation-envelope.md) |
 | Identity assurance | From anonymous to verified, as each action needs; no one remembers a password. | [0020](decisions/0020-no-passwords.md), [0021](decisions/0021-identity-assurance-spectrum.md), [0046](decisions/0046-passwords-scope.md) |
+| Key-based authentication | Passkeys at login and step-up; device keys sign routine work; SSH-style doors; outside providers as evidence. | [0052](decisions/0052-authentication-keys.md) |
+| Private person identifiers | Root identities are random and private; each context sees a pairwise identifier; aliases are linked only by proof. | [0053](decisions/0053-person-identifiers-and-aliases.md) |
 | One person, one identity | Aliases and pseudonyms tie back to one person; no one appears as many. | [0047](decisions/0047-one-person-one-identity.md) |
 | Verifiable views | Each credential sees what it may, and every view still verifies. | [0032](decisions/0032-verifiable-views.md) |
 | Bounds | Visible demarcations with declared rules. | [0036](decisions/0036-bounds.md) |
@@ -34,6 +36,7 @@ still need a decision of their own.
 | Agreement | Participants, robots included, make and honour agreements for principals. | [0038](decisions/0038-agreement.md) |
 | Robot participation | Robots join as participants, sandboxed, with no other way in. | [0010](decisions/0010-robots-same-interface.md), [0011](decisions/0011-robot-sandbox.md) |
 | Robot governance | Enforced constraints, and a published charter recorded with every act. | [0039](decisions/0039-robot-governance.md) |
+| Admin Wave | A server is administered through its first Wave; changes are signed, reviewed by `.admin`, bounded by invariants. | [0051](decisions/0051-admin-wave.md) |
 | Intrinsic robots | Proposed: a deployment's robots act for its declared identity; collapsed by default, discoverable to authorized viewers. | [0048](decisions/0048-server-identity-and-intrinsic-robots.md) |
 | Doors | Ways in for every person, replaceable or mandated by deployment. | [0033](decisions/0033-default-doors-and-tabbed-app.md), [0040](decisions/0040-deployments-may-mandate-doors.md) |
 | Asking | Questions never change the record. | [0018](decisions/0018-asking-and-changing.md) |
@@ -41,6 +44,8 @@ still need a decision of their own.
 | Erasure | Content can be lawfully destroyed while the record proves it existed. | [0029](decisions/0029-signed-operation-envelope.md), [0043](decisions/0043-data-strategy.md) |
 | Federation | Servers share Waves, each Wave with a home whose admission is final. | [0005](decisions/0005-authority-on-admission.md), *open* |
 | Time and notice | Dates that matter (deadlines, hearings, expiries) are known to the Wave, and people are told in time, through any door. | *not yet recorded* |
+| Disputes | Claims that something is wrong are recorded with evidence and status, and resolved by a person with authority; nothing is overwritten. | [0054](decisions/0054-disputes.md) |
+| Safety | The most vulnerable get the most protection: quick exit, no traces on shared devices, safe notices, protected locations and children. | *not yet recorded* |
 | Escalation | A matter passes to a person (a caseworker, a lawyer, legal aid) with its record, by the principal's choice. | *not yet recorded* |
 | Referral directory | Trusted services, sources and authorities can be found and cited. The paper's X.500/LDAP directory layer. | *not yet recorded* |
 | Language and accessibility | Both official languages, translation that marks which text is authoritative, and access for every ability. | *not yet recorded* |
@@ -181,6 +186,32 @@ Capabilities: intrinsic robots, one person one identity, moderation.
 **Sentry.** A personal robot that watches on its principal's behalf and warns
 them privately.
 Capabilities: robot participation, private channel, robot governance.
+
+### Safety
+
+**Quick exit.** One tap or key replaces the screen with something harmless,
+as domestic-violence support sites do.
+Capabilities: safety, doors.
+
+**No traces.** On a shared device: nothing saved, nothing in browser history,
+sessions that end cleanly.
+Capabilities: safety, doors, key-based authentication.
+
+**Safe notices.** The person chooses whether and how they are contacted;
+reminders can be discreet, so a phone someone else sees does not expose them.
+Capabilities: safety, time and notice.
+
+**Protected location.** A person's address and their children's details are
+sealed behind the highest assurance, visible only to people they choose, and
+never inferable from anything else in the Wave.
+Capabilities: safety, bounds, verifiable views, identity assurance.
+
+**Children first.** Children's identities and details are protected at least
+as strongly as the adult's who cares for them.
+Capabilities: safety, bounds, one person one identity.
+
+Exposure of protected information is an incident and a dispute
+([0054](decisions/0054-disputes.md)), never something tidied up quietly.
 
 ### Help
 

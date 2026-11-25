@@ -86,12 +86,21 @@ housing problem, helped in plain language, with a complete record they keep.
 
 ## Principles
 
+- ***Those among us who are the most vulnerable require the most
+  consideration and protection.*** Wave protects people in proportion to the
+  harm they would suffer if it failed them.
+- ***When Wave fails, people can die.*** Wave is a mission-critical service:
+  it fails safe, keeps confidentiality closed and the record preserved, and
+  is never mistaken for an emergency service.
 - **If you don't have WebAssembly, you don't have Wave.**
 - **Invent only the model; standardize everything else.**
 - **No back door.** Robots and people enter by the same interface.
 - **No passwords, ever.**
 - **The record is evidence.** It can withstand scrutiny by a court of law,
   and in some cases a stronger standard.
+- **Prepared for fraud and confusion.** Who said what can always be shown.
+  Disputes are recorded and resolved, never settled by overwriting: a
+  corrected mistake stays visible as a corrected mistake.
 
 ## Documentation
 
@@ -115,7 +124,7 @@ planned ([0044](docs/decisions/0044-documentation.md)). Until then:
 
 ## Order of work
 
-1. A proof that `wave-server` can run as WebAssembly in a container and accept a connection.
+1. **An authenticated echo server**: `wave-server` running as WebAssembly in a container, over HTTP/3 and IPv6, accepting authentication by several methods (passkey, SSH key, BC Services Card) and returning an echo signed with its own server identity. The first test vector.
 2. `wave-core` and playback of a document's history.
 3. The minimal Side Door, so the record can be inspected by eye from here on.
 4. A scripted robot, to prove the participant interface before any model is involved.

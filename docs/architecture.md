@@ -28,6 +28,16 @@ time; the Side Door keeps it one tab away. The complexity is hidden for
 convenience, never for secrecy. In 2009 nothing could translate between a
 person and the structure. An AI agent now can.
 
+Above the quality goals stands one principle: ***those among us who are the
+most vulnerable require the most consideration and protection.*** A woman
+fleeing abuse, looking for housing and caring for children, at a library
+computer with no phone, is the person the design must not fail.
+
+***When Wave fails, people can die*** ([0055](decisions/0055-mission-critical.md)).
+Wave is mission-critical: confidentiality fails closed, the record fails
+preserved, availability degrades gracefully, and Wave is never an emergency
+service.
+
 The quality goals, in order of dependence:
 
 1. **Quality.** The code that keeps the record is correct, and can be shown to
@@ -287,6 +297,13 @@ principals. Capabilities are recorded as decisions; features built from them
 are in [features](features.md). *Proposed.*
 ([0036](decisions/0036-bounds.md), [0037](decisions/0037-without-prejudice.md),
 [0038](decisions/0038-agreement.md))
+
+### Disputes
+
+Wave is prepared for fraud and confusion. A dispute is a recorded claim with
+evidence and a status, resolved by a person with authority and due process;
+nothing disputed is overwritten. *Proposed.*
+([0054](decisions/0054-disputes.md))
 
 ### Robot governance
 
