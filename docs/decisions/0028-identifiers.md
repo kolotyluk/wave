@@ -21,6 +21,9 @@ Proposed so far:
   participants, robots, bounds, deployments. UUIDv7 begins with a timestamp,
   so new keys arrive in order and database indexes stay compact. GUID keys
   also make import and export straightforward.
+- **People and robots are the exception: random UUIDs (version 4)**, kept
+  private, with pairwise identifiers in each context
+  ([0053](0053-person-identifiers-and-aliases.md)).
 - **No auto-increment keys**, anywhere.
 - **The database never generates identifiers.** A new Wave, wavelet, bound or
   participant comes into being through a signed operation, so its identifier

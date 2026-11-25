@@ -115,7 +115,7 @@ planned ([0044](docs/decisions/0044-documentation.md)). Until then:
 
 ## Order of work
 
-1. A proof that `wave-server` can run as WebAssembly in a container and accept a connection.
+1. **An authenticated echo server**: `wave-server` running as WebAssembly in a container, over HTTP/3 and IPv6, accepting authentication by several methods (passkey, SSH key, BC Services Card) and returning an echo signed with its own server identity. The first test vector.
 2. `wave-core` and playback of a document's history.
 3. The minimal Side Door, so the record can be inspected by eye from here on.
 4. A scripted robot, to prove the participant interface before any model is involved.
