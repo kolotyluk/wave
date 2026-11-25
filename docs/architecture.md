@@ -28,6 +28,11 @@ time; the Side Door keeps it one tab away. The complexity is hidden for
 convenience, never for secrecy. In 2009 nothing could translate between a
 person and the structure. An AI agent now can.
 
+Above the quality goals stands one principle: ***those among us who are the
+most vulnerable require the most consideration and protection.*** A woman
+fleeing abuse, looking for housing and caring for children, at a library
+computer with no phone, is the person the design must not fail.
+
 The quality goals, in order of dependence:
 
 1. **Quality.** The code that keeps the record is correct, and can be shown to

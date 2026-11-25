@@ -45,6 +45,7 @@ still need a decision of their own.
 | Federation | Servers share Waves, each Wave with a home whose admission is final. | [0005](decisions/0005-authority-on-admission.md), *open* |
 | Time and notice | Dates that matter (deadlines, hearings, expiries) are known to the Wave, and people are told in time, through any door. | *not yet recorded* |
 | Disputes | Claims that something is wrong are recorded with evidence and status, and resolved by a person with authority; nothing is overwritten. | [0054](decisions/0054-disputes.md) |
+| Safety | The most vulnerable get the most protection: quick exit, no traces on shared devices, safe notices, protected locations and children. | *not yet recorded* |
 | Escalation | A matter passes to a person (a caseworker, a lawyer, legal aid) with its record, by the principal's choice. | *not yet recorded* |
 | Referral directory | Trusted services, sources and authorities can be found and cited. The paper's X.500/LDAP directory layer. | *not yet recorded* |
 | Language and accessibility | Both official languages, translation that marks which text is authoritative, and access for every ability. | *not yet recorded* |
@@ -185,6 +186,32 @@ Capabilities: intrinsic robots, one person one identity, moderation.
 **Sentry.** A personal robot that watches on its principal's behalf and warns
 them privately.
 Capabilities: robot participation, private channel, robot governance.
+
+### Safety
+
+**Quick exit.** One tap or key replaces the screen with something harmless,
+as domestic-violence support sites do.
+Capabilities: safety, doors.
+
+**No traces.** On a shared device: nothing saved, nothing in browser history,
+sessions that end cleanly.
+Capabilities: safety, doors, key-based authentication.
+
+**Safe notices.** The person chooses whether and how they are contacted;
+reminders can be discreet, so a phone someone else sees does not expose them.
+Capabilities: safety, time and notice.
+
+**Protected location.** A person's address and their children's details are
+sealed behind the highest assurance, visible only to people they choose, and
+never inferable from anything else in the Wave.
+Capabilities: safety, bounds, verifiable views, identity assurance.
+
+**Children first.** Children's identities and details are protected at least
+as strongly as the adult's who cares for them.
+Capabilities: safety, bounds, one person one identity.
+
+Exposure of protected information is an incident and a dispute
+([0054](decisions/0054-disputes.md)), never something tidied up quietly.
 
 ### Help
 

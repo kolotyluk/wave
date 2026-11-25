@@ -86,6 +86,9 @@ housing problem, helped in plain language, with a complete record they keep.
 
 ## Principles
 
+- ***Those among us who are the most vulnerable require the most
+  consideration and protection.*** Wave protects people in proportion to the
+  harm they would suffer if it failed them.
 - **If you don't have WebAssembly, you don't have Wave.**
 - **Invent only the model; standardize everything else.**
 - **No back door.** Robots and people enter by the same interface.
