@@ -48,6 +48,15 @@ replace the root identity. Credentials presented from a digital wallet
 (verifiable credentials, such as ISO mdoc over OpenID for Verifiable
 Presentations) are evidence of the same kind.
 
+**First candidate: British Columbia's Person credential.** Issued from a
+verified BC Services Card into the BC Services Card app, verifiable
+independently, revocable, and shared only with the holder's approval. BC
+already combines it with other credentials: a lawyer presents it with a Law
+Society of B.C. credential to reach court materials online, and it supports
+legally binding signatures on web forms. That is the pattern Wave needs for
+verified assurance, for counsel and officials in the Wave Court (0031), and
+for attested statements.
+
 **Authenticator-app codes (TOTP) are a fallback, not a factor of choice.**
 They rest on a shared secret and can be phished; passkeys are preferred.
 

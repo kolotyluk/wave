@@ -73,6 +73,14 @@ Remove an item once the paper carries it.
     ([0022](decisions/0022-evidentiary-record.md));
   - scoped lawful disclosure with no standing back door;
   - HTTP/3 and IPv6 on networks the government runs or funds.
+- **British Columbia's Digital Trust program as a partner**
+  ([0052](decisions/0052-authentication-keys.md)). BC's Person credential
+  (now in the BC Services Card app) is independently verifiable and
+  revocable. In BC's justice project, lawyers combine it with a Law Society
+  credential to access court materials online, and it supports legally
+  binding signatures on web forms. A concrete precedent for Wave's verified
+  assurance, the Wave Court and attested statements; belongs in Appendix H
+  under Citizens' Services, and in section 7's identity discussion.
 - **Courtroom horizon.** The repository records the long-term goal of
   conducting a court proceeding as a Wave
   ([0031](decisions/0031-courtroom-horizon.md)). Wording for the paper is
