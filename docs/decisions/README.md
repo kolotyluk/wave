@@ -56,3 +56,4 @@ not to be built on. See [0001](0001-record-architecture-decisions.md).
 | [0048](0048-server-identity-and-intrinsic-robots.md) | Servers have identities; intrinsic robots are not shown by default, never hidden | Proposed |
 | [0049](0049-postgresql-backed-delivery.md) | PostgreSQL handles durable delivery; external event brokers wait | Accepted |
 | [0050](0050-attack-resistance.md) | Attack resistance applies to every Wave | Accepted |
+| [0051](0051-admin-wave.md) | The Admin Wave: a server is administered through a Wave | Proposed |

@@ -34,6 +34,7 @@ still need a decision of their own.
 | Agreement | Participants, robots included, make and honour agreements for principals. | [0038](decisions/0038-agreement.md) |
 | Robot participation | Robots join as participants, sandboxed, with no other way in. | [0010](decisions/0010-robots-same-interface.md), [0011](decisions/0011-robot-sandbox.md) |
 | Robot governance | Enforced constraints, and a published charter recorded with every act. | [0039](decisions/0039-robot-governance.md) |
+| Admin Wave | A server is administered through its first Wave; changes are signed, reviewed by `.admin`, bounded by invariants. | [0051](decisions/0051-admin-wave.md) |
 | Intrinsic robots | Proposed: a deployment's robots act for its declared identity; collapsed by default, discoverable to authorized viewers. | [0048](decisions/0048-server-identity-and-intrinsic-robots.md) |
 | Doors | Ways in for every person, replaceable or mandated by deployment. | [0033](decisions/0033-default-doors-and-tabbed-app.md), [0040](decisions/0040-deployments-may-mandate-doors.md) |
 | Asking | Questions never change the record. | [0018](decisions/0018-asking-and-changing.md) |
