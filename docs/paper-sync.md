@@ -92,6 +92,16 @@ Remove an item once the paper carries it.
   Keep cache reuse conditional and model-specific. See the sourced
   [comparison](google-wave-and-canada-wave.md) for corrected history and
   protocol dates, including A2A v1.0 on March 12, 2026.
+- **Safety without surveillance**
+  ([0059](decisions/0059-flight-recorder.md),
+  [0060](decisions/0060-bounded-labelled-checks.md),
+  [0061](decisions/0061-safety-response-and-graduated-intervention.md)).
+  Belongs in the section on Charter section 7 and prevention of serious
+  harm: respond to explicit statements, never profile; graduated, disclosed,
+  overridable intervention (the driver-assistance model, not MCAS); a
+  flight recorder for learning from incidents, TSB-style; checks that say
+  when they are partial. A Wave Act could make lawful disclosure for
+  imminent serious harm explicit.
 - **Courtroom horizon.** The repository records the long-term goal of
   conducting a court proceeding as a Wave
   ([0031](decisions/0031-courtroom-horizon.md)). Wording for the paper is

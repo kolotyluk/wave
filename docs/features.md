@@ -45,10 +45,12 @@ still need a decision of their own.
 | Federation | Servers share Waves, each Wave with a home whose admission is final. | [0005](decisions/0005-authority-on-admission.md), *open* |
 | Time and notice | Dates that matter (deadlines, hearings, expiries) are known to the Wave, and people are told in time, through any door. | *not yet recorded* |
 | Disputes | Claims that something is wrong are recorded with evidence and status, and resolved by a person with authority; nothing is overwritten. | [0054](decisions/0054-disputes.md) |
-| Safety | The most vulnerable get the most protection: quick exit, no traces on shared devices, safe notices, protected locations and children. | *not yet recorded* |
+| Safety | The most vulnerable get the most protection: quick exit, no traces on shared devices, safe notices, protected locations and children. Responses to danger are explicit and graduated, never profiling. | [0061](decisions/0061-safety-response-and-graduated-intervention.md) |
 | AI-ready views | Proposed: model-neutral evidence with versioned, bounded derivatives; authorized retrieval and cache isolation. | [0056](decisions/0056-ai-ready-derived-views.md) |
 | Agent interfaces | Proposed: MCP/A2A boundary adapters preserve signing, delegation, admission and disclosure rules. | [0057](decisions/0057-mcp-and-a2a.md) |
 | Wave DOM | Proposed: a semantic projection with versioned selectors and bounded metadata, inspectable by authorized viewers. | [0058](decisions/0058-wave-dom.md) |
+| Flight recorder | Proposed: the system keeps a tamper-evident record of its own behaviour, for learning from incidents. | [0059](decisions/0059-flight-recorder.md) |
+| Bounded checks | Proposed: every check answers in a stated time, and says whether it is complete. | [0060](decisions/0060-bounded-labelled-checks.md) |
 | Escalation | A matter passes to a person (a caseworker, a lawyer, legal aid) with its record, by the principal's choice. | *not yet recorded* |
 | Referral directory | Trusted services, sources and authorities can be found and cited. The paper's X.500/LDAP directory layer. | *not yet recorded* |
 | Language and accessibility | Both official languages, translation that marks which text is authoritative, and access for every ability. | *not yet recorded* |
@@ -212,6 +214,24 @@ Capabilities: safety, bounds, verifiable views, identity assurance.
 **Children first.** Children's identities and details are protected at least
 as strongly as the adult's who cares for them.
 Capabilities: safety, bounds, one person one identity.
+
+**Help in danger.** When someone writes that they intend to harm themselves
+or someone else, the agent responds at once with 9-8-8 or 911, and a serious
+threat goes to a person with lawful authority. Wave does not watch for it.
+Capabilities: safety, robot governance.
+
+**Graduated intervention.** Inform, then nudge, then act; no single signal
+triggers strong action; people are told, can override, and can appeal.
+Capabilities: safety, flight recorder, disputes.
+
+**Someone else at the keyboard.** Disclosed behavioural signals can detect
+that the account holder is not the one typing, and protect the account.
+They never profile the person.
+Capabilities: safety, identity.
+
+**What happened.** After an incident, the flight recorder shows what the
+system did and why.
+Capabilities: flight recorder, admin Wave.
 
 Exposure of protected information is an incident and a dispute
 ([0054](decisions/0054-disputes.md)), never something tidied up quietly.

@@ -64,3 +64,6 @@ not to be built on. See [0001](0001-record-architecture-decisions.md).
 | [0056](0056-ai-ready-derived-views.md) | AI-ready views are derived; the record stays model-neutral | Proposed |
 | [0057](0057-mcp-and-a2a.md) | MCP and A2A meet Wave at its boundary | Proposed |
 | [0058](0058-wave-dom.md) | A Wave DOM serves people and agents alike; agent metadata is recorded | Proposed |
+| [0059](0059-flight-recorder.md) | A flight recorder for the system | Proposed |
+| [0060](0060-bounded-labelled-checks.md) | Checks answer in bounded time, and say whether they are complete | Proposed |
+| [0061](0061-safety-response-and-graduated-intervention.md) | Safety response is graduated, explicit, and never profiling | Proposed |

@@ -319,6 +319,22 @@ information, and is inspectable only through its authorized views.
 *Proposed.* ([0056](decisions/0056-ai-ready-derived-views.md),
 [0057](decisions/0057-mcp-and-a2a.md), [0058](decisions/0058-wave-dom.md))
 
+### Safety and the flight recorder
+
+Wave responds to what people say, never to a profile. A statement of danger
+gets 9-8-8 or 911 at once, and a serious threat goes to a person with lawful
+authority. Interventions are graduated, disclosed, overridable and recorded;
+no single signal triggers strong action. *Proposed.*
+([0061](decisions/0061-safety-response-and-graduated-intervention.md))
+
+Every check answers within a stated time and says whether it is complete;
+partial is never presented as clean. *Proposed.*
+([0060](decisions/0060-bounded-labelled-checks.md))
+
+Every server keeps a flight recorder: a tamper-evident record of the
+system's own behaviour, without secrets or protected content, for learning
+from incidents. *Proposed.* ([0059](decisions/0059-flight-recorder.md))
+
 ### Robot governance
 
 Robots are governed in two layers: constraints the architecture enforces, and
