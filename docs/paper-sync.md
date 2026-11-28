@@ -83,10 +83,15 @@ Remove an item once the paper carries it.
   under Citizens' Services, and in section 7's identity discussion.
 - **AI interfaces** ([0056](decisions/0056-ai-ready-derived-views.md),
   [0057](decisions/0057-mcp-and-a2a.md), [0058](decisions/0058-wave-dom.md)):
-  Appendix B already names A2A and MCP; the repository now says how they meet
-  Wave (MCP as a door, A2A inside the Wave), and Appendix G's DOM discussion
-  gains the Wave DOM, modelled on the accessibility tree so that one design
-  serves blind people and AI agents together.
+  Appendix B already names A2A and MCP; the repository proposes host adapters
+  that preserve actual Wave signing, delegation and disclosure. The protocols
+  do not automatically supply those semantics. Appendix G gains a derived
+  semantic Wave DOM, versioned citation selectors and authorization-scoped
+  metadata, not an assumption of access to hidden model reasoning. Shared
+  semantics help accessibility but do not replace accessible UI testing.
+  Keep cache reuse conditional and model-specific. See the sourced
+  [comparison](google-wave-and-canada-wave.md) for corrected history and
+  protocol dates, including A2A v1.0 on March 12, 2026.
 - **Courtroom horizon.** The repository records the long-term goal of
   conducting a court proceeding as a Wave
   ([0031](decisions/0031-courtroom-horizon.md)). Wording for the paper is

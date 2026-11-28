@@ -308,11 +308,14 @@ nothing disputed is overwritten. *Proposed.*
 
 ### AI interfaces
 
-Tokens are never stored; AI works from structure, stable anchors and derived
-views that inherit their sources' bounds. MCP is a door for agents; agents
-for different parties coordinate inside the Wave, never around it. The Wave
-DOM, designed like an accessibility tree, serves blind people and AI agents
-together, and agent metadata is recorded, collapsed by default, never hidden.
+The record stays model-neutral; tokenized substitutes are not authoritative.
+AI uses versioned, source-anchored derived views with authorization-scoped
+retrieval and caches. MCP/A2A host adapters preserve actual signing and
+delegation; substantive inter-party content is recorded, not hidden in
+metadata. The derived Wave DOM provides shared semantic structure for
+accessible interfaces and agents, without replacing accessibility testing.
+Bounded agent metadata distinguishes observations, claims and missing
+information, and is inspectable only through its authorized views.
 *Proposed.* ([0056](decisions/0056-ai-ready-derived-views.md),
 [0057](decisions/0057-mcp-and-a2a.md), [0058](decisions/0058-wave-dom.md))
 
