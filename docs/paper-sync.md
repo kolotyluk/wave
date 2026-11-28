@@ -81,6 +81,12 @@ Remove an item once the paper carries it.
   binding signatures on web forms. A concrete precedent for Wave's verified
   assurance, the Wave Court and attested statements; belongs in Appendix H
   under Citizens' Services, and in section 7's identity discussion.
+- **AI interfaces** ([0056](decisions/0056-ai-ready-derived-views.md),
+  [0057](decisions/0057-mcp-and-a2a.md), [0058](decisions/0058-wave-dom.md)):
+  Appendix B already names A2A and MCP; the repository now says how they meet
+  Wave (MCP as a door, A2A inside the Wave), and Appendix G's DOM discussion
+  gains the Wave DOM, modelled on the accessibility tree so that one design
+  serves blind people and AI agents together.
 - **Courtroom horizon.** The repository records the long-term goal of
   conducting a court proceeding as a Wave
   ([0031](decisions/0031-courtroom-horizon.md)). Wording for the paper is

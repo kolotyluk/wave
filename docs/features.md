@@ -46,6 +46,9 @@ still need a decision of their own.
 | Time and notice | Dates that matter (deadlines, hearings, expiries) are known to the Wave, and people are told in time, through any door. | *not yet recorded* |
 | Disputes | Claims that something is wrong are recorded with evidence and status, and resolved by a person with authority; nothing is overwritten. | [0054](decisions/0054-disputes.md) |
 | Safety | The most vulnerable get the most protection: quick exit, no traces on shared devices, safe notices, protected locations and children. | *not yet recorded* |
+| AI-ready views | Text renderings, extracted text, embeddings and summaries as derived, bounded views; tokens never stored. | [0056](decisions/0056-ai-ready-derived-views.md) |
+| Agent interfaces | MCP as a door for agents; A2A agents participate inside Waves; JSON at the boundary. | [0057](decisions/0057-mcp-and-a2a.md) |
+| Wave DOM | A semantic tree of the record for people and agents alike; agent metadata recorded, never hidden. | [0058](decisions/0058-wave-dom.md) |
 | Escalation | A matter passes to a person (a caseworker, a lawyer, legal aid) with its record, by the principal's choice. | *not yet recorded* |
 | Referral directory | Trusted services, sources and authorities can be found and cited. The paper's X.500/LDAP directory layer. | *not yet recorded* |
 | Language and accessibility | Both official languages, translation that marks which text is authoritative, and access for every ability. | *not yet recorded* |

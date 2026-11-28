@@ -305,6 +305,16 @@ evidence and a status, resolved by a person with authority and due process;
 nothing disputed is overwritten. *Proposed.*
 ([0054](decisions/0054-disputes.md))
 
+### AI interfaces
+
+Tokens are never stored; AI works from structure, stable anchors and derived
+views that inherit their sources' bounds. MCP is a door for agents; agents
+for different parties coordinate inside the Wave, never around it. The Wave
+DOM, designed like an accessibility tree, serves blind people and AI agents
+together, and agent metadata is recorded, collapsed by default, never hidden.
+*Proposed.* ([0056](decisions/0056-ai-ready-derived-views.md),
+[0057](decisions/0057-mcp-and-a2a.md), [0058](decisions/0058-wave-dom.md))
+
 ### Robot governance
 
 Robots are governed in two layers: constraints the architecture enforces, and
