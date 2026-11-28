@@ -30,24 +30,51 @@ It records:
 - checks that returned partial results (0060).
 
 **It is evidence too.** Entries are chained and periodically checkpointed,
-time-stamped and witnessed like the record (0022), so an operator cannot
-quietly rewrite what the system did.
+time-stamped and witnessed like the record (0022). This makes changes to
+committed history detectable against independently held checkpoints; it
+does not prove that every real-world event was captured, or protect an
+unwitnessed tail against every compromised-host attack.
 
-**It holds no secrets and no protected content.** It records that protected
-information was opened, not what it said. No keys, tokens or credentials, and
-nothing that would reveal a sealed matter or a pseudonym's link to its
-person (0050, 0053).
+**Audit and diagnostics have different guarantees.** Protected-data access,
+authority changes, break-glass use, lawful disclosure and safety decisions
+are mandatory audit events, never sampled. High-volume diagnostics and
+rejection details may be sampled or aggregated under a published policy,
+with coverage and dropped-event counts stated. Admission receipts remain
+in the authoritative log (0043), not a sampled substitute.
 
-**It is bounded.** It has a defined size, retention and sampling policy, and
-counts against resource limits (0050).
+**Sensitive actions require a durable audit trail.** Before protected data
+leaves the controlled boundary or an authority change takes effect, durable
+audit intent must be recorded; outcome or uncertain completion is appended.
+The action and intent are atomic where possible; external effects require
+reconciliation, not a claim of atomicity across systems. If audit recording
+fails, those actions fail closed. Recovery uses a separately protected,
+durably audited host path, with reconciliation when service resumes (0051);
+it is not an unaudited bypass.
+
+**It minimizes data; it is not automatically non-sensitive.** No credentials,
+keys, tokens, protected payloads or free-form copies of user input. Access
+times, actor identifiers and relationships can themselves expose a sealed
+matter or a pseudonym-root link. Use scoped identifiers and protected audit
+compartments, with least-privilege access and controlled correlation
+(0050, 0053). Readers see only the audit view they are authorized to see.
+
+**It is bounded without silently losing audit evidence.** Separate retention,
+legal holds, storage reservations and capacity alarms apply to mandatory
+audit and sampled diagnostics. State the durability level reached and any
+known gaps. Exhaustion sheds diagnostics or stops affected sensitive actions;
+it never silently overwrites mandatory events still under retention.
 
 **It is for learning.** Its first use is incident investigation in the TSB
 spirit: what happened, why, and how to prevent it. Its access is itself
-recorded.
+recorded. The TSB analogy is a purpose, not a grant of legal privilege or
+immunity from lawful production.
 
 ## Consequences
 
-Every incident in a mission-critical service (0055) can be reconstructed.
+Incident reconstruction is supported within the stated capture, retention,
+durability and trust limits. Independent observations are needed for events
+the server cannot record, including its own complete failure (0062).
 
 Which fields are recorded, and who may read the flight recorder, must be
-specified before production.
+specified before production, along with failure, recovery, audit-export
+verification and capacity tests.

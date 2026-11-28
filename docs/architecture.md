@@ -322,30 +322,39 @@ information, and is inspectable only through its authorized views.
 ### Safety and the flight recorder
 
 Wave responds to what people say, never to a profile. A statement of danger
-gets 9-8-8 or 911 at once, and a serious threat goes to a person with lawful
-authority. Interventions are graduated, disclosed, overridable and recorded;
-no single signal triggers strong action. *Proposed.*
+gets a prompt 9-8-8 or 911 referral when the door is available; this does not
+promise monitoring or dispatch. Human review and disclosure require explicit
+authority within bounds. Advisory help can be dismissed; security and legal
+constraints cannot. Inferences are not findings, and optional behavioural
+authentication needs separate privacy and accessibility review. *Proposed.*
 ([0061](decisions/0061-safety-response-and-graduated-intervention.md))
 
-Every check answers within a stated time and says whether it is complete;
-partial is never presented as clean. *Proposed.*
+Checks have time and work budgets, with coverage separate from allow, deny or
+indeterminate outcomes. Partial is never clean; mandatory authorization is
+revalidated at the effect. *Proposed.*
 ([0060](decisions/0060-bounded-labelled-checks.md))
 
 Every server keeps a flight recorder: a tamper-evident record of the
-system's own behaviour, without secrets or protected content, for learning
-from incidents. *Proposed.* ([0059](decisions/0059-flight-recorder.md))
+system's own behaviour, for learning from incidents. Mandatory audit events
+are not sampled; diagnostics may be. Sensitive actions require durable audit
+intent, and audit metadata has its own access protections. Integrity proofs
+do not prove complete capture. *Proposed.*
+([0059](decisions/0059-flight-recorder.md))
 
-Service levels are set by kind of action: interactive replies in seconds,
-deadlines for people in the loop, an immediate danger referral, and stated
-recovery objectives. Outages are recorded as evidence. *Proposed.*
+Service objectives are set by kind of action, with measurable targets,
+explicit durability levels and recovery consistent with preserving admitted
+evidence. Independent probes and client evidence supplement server logs;
+outage evidence does not automatically establish deadline relief. *Proposed.*
 ([0062](decisions/0062-service-levels.md))
 
 ### Lawful access
 
-Lawful access is designed in, without a back door: production from the
-record scoped by bounds, live access only by a declared, time-bounded
-participant, every access recorded, notice delayed rather than denied, and
-privilege reviewed. *Proposed.*
+Lawful access uses validated, scoped grants and protected audit records.
+Live access is read-only, expiring and revalidated at delivery, including
+privilege screening. No generic override of bounds or missing encryption
+keys is created. Secrecy restrictions are reviewed for lawful notice.
+Verifiable exports prove integrity, not absence of other disclosure; avoiding
+systemic vulnerabilities remains subject to independent review. *Proposed.*
 ([0063](decisions/0063-lawful-access-without-a-back-door.md))
 
 ### Robot governance

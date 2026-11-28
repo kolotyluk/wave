@@ -97,18 +97,28 @@ Remove an item once the paper carries it.
   [0060](decisions/0060-bounded-labelled-checks.md),
   [0061](decisions/0061-safety-response-and-graduated-intervention.md)).
   Belongs in the section on Charter section 7 and prevention of serious
-  harm: respond to explicit statements, never profile; graduated, disclosed,
-  overridable intervention (the driver-assistance model, not MCAS); a
-  flight recorder for learning from incidents, TSB-style; checks that say
-  when they are partial. A Wave Act could make lawful disclosure for
-  imminent serious harm explicit.
+  harm: respond to statements in context, never build mental-state profiles.
+  Distinguish dismissible advice from temporary protection, authorized human
+  review and lawful disclosure; no generic safety override of bounds.
+  Behavioural authentication remains optional and separately assessed.
+  A flight recorder separates protected mandatory audit from sampled
+  diagnostics, without promising complete reconstruction or legal immunity.
+  Checks distinguish coverage from outcome and revalidate authorization.
+  Service objectives distinguish admission from durability; independent
+  observations support outage evidence, not automatic deadline relief (0062).
+  A Wave Act could clarify lawful disclosure for imminent serious harm;
+  permission, reporting duties and privilege exceptions must stay distinct.
 - **Bill C-22, the Lawful Access Act, 2026**
   ([0063](decisions/0063-lawful-access-without-a-back-door.md)). The paper
-  should engage with it: Wave as a worked example of lawful access without
-  a systemic vulnerability. Production scoped by verifiable views, live
-  access only by a declared participant, every access in the flight
-  recorder, delayed notice, privilege review. Also a basis for a
-  submission on the bill.
+  should engage with it as a proposal, not enacted authority; LEGISinfo
+  reports Senate report stage after the November 26, 2026 committee report.
+  Wave proposes constrained, auditable access, not a proven absence of
+  systemic vulnerability. Validated grants, expiring read-only delivery,
+  ongoing privilege screening and lawful notice review are required.
+  Verifiable views prove export integrity, not absence of extra copies.
+  There is no generic override of bounds or end-to-end encryption; technical
+  access and legal authority are distinct. Recheck the applicable text and
+  status before any submission or deployment.
 - **Courtroom horizon.** The repository records the long-term goal of
   conducting a court proceeding as a Wave
   ([0031](decisions/0031-courtroom-horizon.md)). Wording for the paper is

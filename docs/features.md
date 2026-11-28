@@ -49,16 +49,16 @@ still need a decision of their own.
 | AI-ready views | Proposed: model-neutral evidence with versioned, bounded derivatives; authorized retrieval and cache isolation. | [0056](decisions/0056-ai-ready-derived-views.md) |
 | Agent interfaces | Proposed: MCP/A2A boundary adapters preserve signing, delegation, admission and disclosure rules. | [0057](decisions/0057-mcp-and-a2a.md) |
 | Wave DOM | Proposed: a semantic projection with versioned selectors and bounded metadata, inspectable by authorized viewers. | [0058](decisions/0058-wave-dom.md) |
-| Flight recorder | Proposed: the system keeps a tamper-evident record of its own behaviour, for learning from incidents. | [0059](decisions/0059-flight-recorder.md) |
-| Bounded checks | Proposed: every check answers in a stated time, and says whether it is complete. | [0060](decisions/0060-bounded-labelled-checks.md) |
+| Flight recorder | Proposed: protected, unsampled mandatory audit events, separate from sampled diagnostics; tamper evidence with explicit capture and durability limits. | [0059](decisions/0059-flight-recorder.md) |
+| Bounded checks | Proposed: time and work budgets; coverage distinct from outcome; authorization revalidated at the effect. | [0060](decisions/0060-bounded-labelled-checks.md) |
 | Escalation | A matter passes to a person (a caseworker, a lawyer, legal aid) with its record, by the principal's choice. | *not yet recorded* |
 | Referral directory | Trusted services, sources and authorities can be found and cited. The paper's X.500/LDAP directory layer. | *not yet recorded* |
 | Language and accessibility | Both official languages, translation that marks which text is authoritative, and access for every ability. | *not yet recorded* |
 | Systemic evidence | Individual journeys contribute, by consent and anonymously, to evidence about systemic problems. | *not yet recorded* |
 | Private channel | A person's own robot reports to them outside the Wave, as the paper's sentry does. | *not yet recorded* |
 | Moderation | Abuse is handled by a process with notice and appeal. | *not yet recorded* |
-| Lawful disclosure | Proposed: disclosure under legal authority is scoped, recorded, notified when the law allows, and never a standing back door. | [0063](decisions/0063-lawful-access-without-a-back-door.md) |
-| Service levels | Proposed: set by kind of action; checks a fraudster could watch reveal nothing; outages are evidence. | [0062](decisions/0062-service-levels.md) |
+| Lawful disclosure | Proposed: validated, expiring grants, privilege screening and protected audit; no generic bound override or decryption capability. | [0063](decisions/0063-lawful-access-without-a-back-door.md) |
+| Service levels | Proposed: measurable action-specific objectives, truthful durability, side-channel mitigation and independently supported outage evidence. | [0062](decisions/0062-service-levels.md) |
 
 ## Features
 
@@ -217,21 +217,27 @@ as strongly as the adult's who cares for them.
 Capabilities: safety, bounds, one person one identity.
 
 **Help in danger.** When someone writes that they intend to harm themselves
-or someone else, the agent responds at once with 9-8-8 or 911, and a serious
-threat goes to a person with lawful authority. Wave does not watch for it.
+or someone else, an available door promptly offers 9-8-8 or 911 without
+waiting for model generation. Review and external disclosure require explicit
+authority, respect bounds and consider context; a referral does not promise
+monitoring, a human response or dispatch.
 Capabilities: safety, robot governance.
 
-**Graduated intervention.** Inform, then nudge, then act; no single signal
-triggers strong action; people are told, can override, and can appeal.
+**Graduated intervention.** Advisory help, temporary protection, human review
+and disclosure have distinct authority and review rules. Correlated signals
+are not corroboration; a credible explicit threat need not await a second
+flag. Advice can be dismissed, not mandatory security or legal constraints.
+Adverse interventions have notice, with justified delays, and appeal.
 Capabilities: safety, flight recorder, disputes.
 
-**Someone else at the keyboard.** Disclosed behavioural signals can detect
-that the account holder is not the one typing, and protect the account.
-They never profile the person.
+**Someone else at the keyboard (proposed).** Optional, separately assessed
+behavioural authentication may suggest account compromise, not prove it.
+Accessible alternatives, minimal retention, safe notification and recovery
+are required; a mismatch alone cannot cause permanent lockout or disclosure.
 Capabilities: safety, identity.
 
-**What happened.** After an incident, the flight recorder shows what the
-system did and why.
+**What happened.** After an incident, protected flight-recorder views support
+reconstruction within their stated capture, retention and trust limits.
 Capabilities: flight recorder, admin Wave.
 
 Exposure of protected information is an incident and a dispute
