@@ -16,6 +16,9 @@ that was developed for it. The Wave Federation Protocol is now
 maintained by the [Apache Wave project](https://en.wikipedia.org/wiki/Apache_Wave).
 Apache Wave is now archived.
 
+See [Google Wave and Canada Wave](docs/google-wave-and-canada-wave.md) for
+the shared lineage and the differences in purpose, architecture and AI interfaces.
+
 ## Status
 
 **Nothing is built yet.** This repository holds the plan and the decisions
@@ -83,6 +86,19 @@ world.
 
 **The first journey is the Automated Housing Advocate**: a person with a
 housing problem, helped in plain language, with a complete record they keep.
+
+## Applications
+
+### The Automated Housing Advocate
+
+A front door for people with housing problems, and a side door for the lawyers and advocates who help them.
+The record is the journey, and the journey is the record.
+
+### The Court - Reimagined - Blue Sky
+
+Canadian courts are underresourced and overworked, and out of date on many fronts.
+
+Wave is designed on a vision for a more effective and fair justice system.
 
 ## Principles
 
