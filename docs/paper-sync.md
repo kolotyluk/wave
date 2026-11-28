@@ -102,6 +102,13 @@ Remove an item once the paper carries it.
   flight recorder for learning from incidents, TSB-style; checks that say
   when they are partial. A Wave Act could make lawful disclosure for
   imminent serious harm explicit.
+- **Bill C-22, the Lawful Access Act, 2026**
+  ([0063](decisions/0063-lawful-access-without-a-back-door.md)). The paper
+  should engage with it: Wave as a worked example of lawful access without
+  a systemic vulnerability. Production scoped by verifiable views, live
+  access only by a declared participant, every access in the flight
+  recorder, delayed notice, privilege review. Also a basis for a
+  submission on the bill.
 - **Courtroom horizon.** The repository records the long-term goal of
   conducting a court proceeding as a Wave
   ([0031](decisions/0031-courtroom-horizon.md)). Wording for the paper is

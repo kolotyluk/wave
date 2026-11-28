@@ -67,3 +67,5 @@ not to be built on. See [0001](0001-record-architecture-decisions.md).
 | [0059](0059-flight-recorder.md) | A flight recorder for the system | Proposed |
 | [0060](0060-bounded-labelled-checks.md) | Checks answer in bounded time, and say whether they are complete | Proposed |
 | [0061](0061-safety-response-and-graduated-intervention.md) | Safety response is graduated, explicit, and never profiling | Proposed |
+| [0062](0062-service-levels.md) | Service levels by kind of action | Proposed |
+| [0063](0063-lawful-access-without-a-back-door.md) | Lawful access without a back door | Proposed |

@@ -57,7 +57,8 @@ still need a decision of their own.
 | Systemic evidence | Individual journeys contribute, by consent and anonymously, to evidence about systemic problems. | *not yet recorded* |
 | Private channel | A person's own robot reports to them outside the Wave, as the paper's sentry does. | *not yet recorded* |
 | Moderation | Abuse is handled by a process with notice and appeal. | *not yet recorded* |
-| Lawful disclosure | Disclosure under legal authority is scoped, recorded, and never a standing back door. | *not yet recorded* |
+| Lawful disclosure | Proposed: disclosure under legal authority is scoped, recorded, notified when the law allows, and never a standing back door. | [0063](decisions/0063-lawful-access-without-a-back-door.md) |
+| Service levels | Proposed: set by kind of action; checks a fraudster could watch reveal nothing; outages are evidence. | [0062](decisions/0062-service-levels.md) |
 
 ## Features
 

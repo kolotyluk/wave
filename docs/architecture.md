@@ -335,6 +335,19 @@ Every server keeps a flight recorder: a tamper-evident record of the
 system's own behaviour, without secrets or protected content, for learning
 from incidents. *Proposed.* ([0059](decisions/0059-flight-recorder.md))
 
+Service levels are set by kind of action: interactive replies in seconds,
+deadlines for people in the loop, an immediate danger referral, and stated
+recovery objectives. Outages are recorded as evidence. *Proposed.*
+([0062](decisions/0062-service-levels.md))
+
+### Lawful access
+
+Lawful access is designed in, without a back door: production from the
+record scoped by bounds, live access only by a declared, time-bounded
+participant, every access recorded, notice delayed rather than denied, and
+privilege reviewed. *Proposed.*
+([0063](decisions/0063-lawful-access-without-a-back-door.md))
+
 ### Robot governance
 
 Robots are governed in two layers: constraints the architecture enforces, and
