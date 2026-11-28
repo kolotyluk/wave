@@ -68,7 +68,8 @@ Wave borrows concepts from proven designs and leaves their machinery behind.
 - **Apache Wave** (Google Wave, 2009–2018): the shared object, operations as
   the only way to change it, attributed and replayable history, robots as
   participants, federation. Not its RPC, its JSON mapping or its use of XMPP.
-  ([0013](decisions/0013-apache-wave-lineage.md))
+  ([0013](decisions/0013-apache-wave-lineage.md); the full comparison is in
+  [Google Wave and Canada Wave](google-wave-and-canada-wave.md))
 - **X.500** (ITU-T X.500 series, with LDAP as its lightweight successor): the
   administrative model of X.501, which declared visible, precisely scoped
   regions of a tree with their own rules, became Wave's bounds; operational
@@ -304,6 +305,19 @@ Wave is prepared for fraud and confusion. A dispute is a recorded claim with
 evidence and a status, resolved by a person with authority and due process;
 nothing disputed is overwritten. *Proposed.*
 ([0054](decisions/0054-disputes.md))
+
+### AI interfaces
+
+The record stays model-neutral; tokenized substitutes are not authoritative.
+AI uses versioned, source-anchored derived views with authorization-scoped
+retrieval and caches. MCP/A2A host adapters preserve actual signing and
+delegation; substantive inter-party content is recorded, not hidden in
+metadata. The derived Wave DOM provides shared semantic structure for
+accessible interfaces and agents, without replacing accessibility testing.
+Bounded agent metadata distinguishes observations, claims and missing
+information, and is inspectable only through its authorized views.
+*Proposed.* ([0056](decisions/0056-ai-ready-derived-views.md),
+[0057](decisions/0057-mcp-and-a2a.md), [0058](decisions/0058-wave-dom.md))
 
 ### Robot governance
 

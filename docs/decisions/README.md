@@ -61,3 +61,6 @@ not to be built on. See [0001](0001-record-architecture-decisions.md).
 | [0053](0053-person-identifiers-and-aliases.md) | Person identifiers stay private; aliases are proven, never assumed | Proposed |
 | [0054](0054-disputes.md) | Disputes are recorded and resolved, never overwritten | Proposed |
 | [0055](0055-mission-critical.md) | Wave is a mission-critical service | Accepted |
+| [0056](0056-ai-ready-derived-views.md) | AI-ready views are derived; the record stays model-neutral | Proposed |
+| [0057](0057-mcp-and-a2a.md) | MCP and A2A meet Wave at its boundary | Proposed |
+| [0058](0058-wave-dom.md) | A Wave DOM serves people and agents alike; agent metadata is recorded | Proposed |
