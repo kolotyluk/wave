@@ -68,7 +68,8 @@ Wave borrows concepts from proven designs and leaves their machinery behind.
 - **Apache Wave** (Google Wave, 2009–2018): the shared object, operations as
   the only way to change it, attributed and replayable history, robots as
   participants, federation. Not its RPC, its JSON mapping or its use of XMPP.
-  ([0013](decisions/0013-apache-wave-lineage.md))
+  ([0013](decisions/0013-apache-wave-lineage.md); the full comparison is in
+  [Google Wave and Canada Wave](google-wave-and-canada-wave.md))
 - **X.500** (ITU-T X.500 series, with LDAP as its lightweight successor): the
   administrative model of X.501, which declared visible, precisely scoped
   regions of a tree with their own rules, became Wave's bounds; operational
