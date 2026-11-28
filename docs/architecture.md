@@ -319,6 +319,35 @@ information, and is inspectable only through its authorized views.
 *Proposed.* ([0056](decisions/0056-ai-ready-derived-views.md),
 [0057](decisions/0057-mcp-and-a2a.md), [0058](decisions/0058-wave-dom.md))
 
+### Safety and the flight recorder
+
+Wave responds to what people say, never to a profile. A statement of danger
+gets 9-8-8 or 911 at once, and a serious threat goes to a person with lawful
+authority. Interventions are graduated, disclosed, overridable and recorded;
+no single signal triggers strong action. *Proposed.*
+([0061](decisions/0061-safety-response-and-graduated-intervention.md))
+
+Every check answers within a stated time and says whether it is complete;
+partial is never presented as clean. *Proposed.*
+([0060](decisions/0060-bounded-labelled-checks.md))
+
+Every server keeps a flight recorder: a tamper-evident record of the
+system's own behaviour, without secrets or protected content, for learning
+from incidents. *Proposed.* ([0059](decisions/0059-flight-recorder.md))
+
+Service levels are set by kind of action: interactive replies in seconds,
+deadlines for people in the loop, an immediate danger referral, and stated
+recovery objectives. Outages are recorded as evidence. *Proposed.*
+([0062](decisions/0062-service-levels.md))
+
+### Lawful access
+
+Lawful access is designed in, without a back door: production from the
+record scoped by bounds, live access only by a declared, time-bounded
+participant, every access recorded, notice delayed rather than denied, and
+privilege reviewed. *Proposed.*
+([0063](decisions/0063-lawful-access-without-a-back-door.md))
+
 ### Robot governance
 
 Robots are governed in two layers: constraints the architecture enforces, and
